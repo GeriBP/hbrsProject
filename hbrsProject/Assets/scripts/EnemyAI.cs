@@ -5,54 +5,53 @@ using UnityEngine;
 public class EnemyAI : MonoBehaviour
 {
     public float speed = 0.1f;
+    public float attackRange = 1;
     public float attackCooldown = 1;
 
     private Transform playerTransform;
     private Rigidbody2D ridgidbody;
-    private float attackTimer;
+    private bool canAttack = true;
 
     private Vector3 direction = Vector3.left;
 
     // Use this for initialization
     void Start()
     {
-        this.playerTransform = GameObject.Find("player").transform;
+        this.playerTransform = GameObject.Find("playerBody").transform;
         this.ridgidbody = this.GetComponent<Rigidbody2D>();
-        this.attackTimer = this.attackCooldown;
     }
 
     // Update is called once per frame
     void Update()
     {
-        // Attack cooldown
-        this.attackTimer -= Time.deltaTime;
-        if (this.attackTimer < 0)
-            this.attackTimer = 0;
-
         // Chase player
-        bool canSeePlayer = Physics2D.Linecast(this.transform.position, this.playerTransform.position, 1 << LayerMask.NameToLayer("Ground"));
-        if (!canSeePlayer)
-            this.direction = this.playerTransform.position.x - this.transform.position.x > 0 ? Vector3.right : Vector3.left;
+        bool canSeePlayer = !Physics2D.Linecast(this.transform.position, this.playerTransform.position, 1 << LayerMask.NameToLayer("Ground"));
+        if (canSeePlayer)
+            this.direction = (this.playerTransform.position - this.transform.position).normalized;
 
         bool grounded = Physics2D.Linecast(this.transform.position, this.transform.position + Vector3.down, 1 << LayerMask.NameToLayer("Ground"));
-        if (Vector3.Distance(this.transform.position, this.playerTransform.position) > 2)
+        bool canFly = this.GetComponent<Rigidbody2D>().gravityScale == 0;
+        if (Vector3.Distance(this.transform.position, this.playerTransform.position) > 1 + this.attackRange)
         {
             // Jump random
-            if (grounded && Random.value > 0.99)
+            if (!canFly && grounded && Random.value > 0.99)
                 this.Jump();
 
             // Move
+            if (!canFly)
+                this.direction = this.direction.x > 0 ? Vector3.right : Vector3.left;
             Vector3 movement = this.direction * this.speed * Time.deltaTime;
-            if (!grounded) movement *= 0.5f;
+            if (!(grounded || canFly)) movement *= 0.5f;
             this.transform.position += movement;
         }
         else
         {
             // TODO check if player is on side (not on top or below)
-            if (grounded && attackTimer == 0)
+            if ((grounded || canFly) && this.canAttack)
             {
+                this.canAttack = false;
+                Invoke("ResetAttack", this.attackCooldown);
                 this.Attack();
-                this.attackTimer = this.attackCooldown;
             }
         }
 
@@ -73,8 +72,12 @@ public class EnemyAI : MonoBehaviour
 
     private void Attack()
     {
-        Debug.Log("Attack");
         Health health = this.playerTransform.GetComponent<Health>();
-        health.Adjust(-10);
+        health.Adjust(-10); 
+    }
+
+    private void ResetAttack()
+    {
+        this.canAttack = true;
     }
 }
