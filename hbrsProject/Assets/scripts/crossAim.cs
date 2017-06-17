@@ -1,19 +1,21 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class crossAim : MonoBehaviour
+public class CrossAim : MonoBehaviour
 {
-    private Vector3 mousePosition;
-    public float smooth;
-    void Start()
+    public float radius = 100f;
+
+    private Transform playerTransform;
+    private CameraFollow cameraFollow;
+
+    private void Awake()
     {
-        Cursor.visible = false;
+        this.playerTransform = GameObject.Find("Player").transform;
+        this.cameraFollow = Camera.main.GetComponent<CameraFollow>();
     }
 
-    void Update()
+    void LateUpdate()
     {
-        mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        transform.position = new Vector2(mousePosition.x, mousePosition.y);
-        //transform.position = Vector3.MoveTowards(transform.position, new Vector3(mousePosition.x, mousePosition.y, 0.0f), smooth);
+        this.transform.position = this.cameraFollow.GetWorldPosition(Input.mousePosition);
     }
 }

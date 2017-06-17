@@ -25,8 +25,8 @@ public class Trap : MonoBehaviour {
         {
             this.active = false;
             Invoke("ActivateTrap", this.cooldown);
-            Health health = collision.gameObject.GetComponent<Health>();
-            health.Adjust(-this.damage);
+            Player player = collision.gameObject.GetComponent<Player>();
+            player.AdjustHealth(-this.damage);
         }
     }
 

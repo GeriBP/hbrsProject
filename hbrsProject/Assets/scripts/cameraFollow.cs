@@ -2,21 +2,25 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class cameraFollow : MonoBehaviour {
-    [SerializeField]
-    GameObject camFollowP;
-    [SerializeField]
-    float smooth;
-    private float iniZ;
-    // Use this for initialization
+public class CameraFollow : MonoBehaviour {
+    public Transform target;
+    
     void Start () {
-        //Disable OS cursor, we just want to see the crosshair
         Cursor.visible = false;
-        iniZ = transform.position.z;
+        this.transform.parent = null;
     }
-	
-	// Update is called once per frame
-	void FixedUpdate () {
-        transform.position = Vector3.Lerp(transform.position, new Vector3(camFollowP.transform.position.x, camFollowP.transform.position.y, iniZ), smooth);
+
+    private void LateUpdate()
+    {
+        this.transform.position = new Vector3(this.target.position.x, this.target.position.y, this.transform.position.z);
+    }
+
+    public Vector3 GetWorldPosition(Vector3 screenPosition)
+    {
+        Ray ray = Camera.main.ScreenPointToRay(screenPosition);
+        Plane xy = new Plane(Vector3.forward, Vector3.zero);
+        float distance;
+        xy.Raycast(ray, out distance);
+        return ray.GetPoint(distance);
     }
 }
