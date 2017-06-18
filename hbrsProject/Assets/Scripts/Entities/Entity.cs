@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Entity : MonoBehaviour {
+public abstract class Entity : MonoBehaviour {
     [Header("Movement")]
     public float movementSpeed = 1f;
     public float airMovementModifier = 1f;
@@ -21,9 +21,11 @@ public class Entity : MonoBehaviour {
     private Transform ceilingCheck;
     private GameObject healthBar;
     private Slider healthBarSlider;
-
+    
     protected new Rigidbody2D rigidbody;
     protected Animator animator;
+    protected bool grounded = false;
+    protected bool crouched = false;
 
     protected void Awake()
     {
@@ -50,10 +52,11 @@ public class Entity : MonoBehaviour {
             GameObject.Destroy(this.gameObject);
             return;
         }
-        
+
+        this.grounded = this.rigidbody.gravityScale > 0 && Physics2D.Linecast(this.groundCheck.position, this.groundCheck.position + Vector3.down * 0.01f, 1 << LayerMask.NameToLayer("Ground"));
         if (this.animator)
         {
-            this.animator.SetBool("grounded", Physics2D.Linecast(this.groundCheck.position, this.groundCheck.position + Vector3.down * 0.01f, 1 << LayerMask.NameToLayer("Ground")));
+            this.animator.SetBool("grounded", this.grounded);
             this.animator.SetFloat("verticalSpeed", this.rigidbody.velocity.y);
         }
     }
@@ -66,30 +69,40 @@ public class Entity : MonoBehaviour {
         }
     }
 
-    public void Move(float horizontalMovement, bool crouch, bool jump)
+    public void Move(Vector3 movementDirection, bool crouch, bool jump)
     {
-        if (!crouch && this.animator.GetBool("crouched"))
+        if (!crouch && this.crouched)
         {
-            if (Physics2D.Linecast(this.groundCheck.position, this.ceilingCheck.position + Vector3.up * 0.01f))
-            {
-                crouch = true;
-            }
+            crouch = Physics2D.Linecast(this.groundCheck.position, this.ceilingCheck.position + Vector3.up * 0.01f);
         }
-        this.animator.SetBool("crouched", crouch);
+        this.crouched = crouch;
 
-        float movement = horizontalMovement;
-        if (!this.animator.GetBool("grounded"))
-            movement *= this.airMovementModifier;
-        else if (this.animator.GetBool("crouched"))
-            movement *= this.crouchMovementModifier;
+        if (this.rigidbody.gravityScale > 0)
+            movementDirection.y = 0;
+        movementDirection = movementDirection.normalized;
 
-        this.rigidbody.velocity = new Vector2(horizontalMovement * this.movementSpeed, this.rigidbody.velocity.y);
-        this.animator.SetFloat("speed", Mathf.Abs(this.rigidbody.velocity.x));
+        if (!this.grounded)
+            movementDirection *= this.airMovementModifier;
+        else if (this.crouched)
+            movementDirection *= this.crouchMovementModifier;
+        movementDirection *= this.movementSpeed;
+        
+        if (this.rigidbody.gravityScale > 0)
+            movementDirection.y = this.rigidbody.velocity.y;
+        this.rigidbody.velocity = movementDirection;
+        
 
-        if (this.animator.GetBool("grounded") && jump)
+        if (this.grounded && jump)
         {
-            this.animator.SetBool("grounded", false);
+            this.grounded = false;
             this.rigidbody.AddForce(new Vector2(0, this.jumpForce), ForceMode2D.Impulse);
+        }
+
+        if (this.animator)
+        {
+            this.animator.SetBool("grounded", this.grounded);
+            this.animator.SetBool("crouched", this.crouched);
+            this.animator.SetFloat("speed", Mathf.Abs(this.rigidbody.velocity.x));
         }
     }
 

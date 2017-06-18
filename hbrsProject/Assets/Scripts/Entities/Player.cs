@@ -22,10 +22,6 @@ public class Player : Entity
         {
             // Read the jump input in Update so button presses aren't missed
             this.shouldJump = Input.GetKeyDown(KeyCode.W);
-            if (this.shouldJump)
-            {
-                Debug.Log("GERADE");
-            }
         }
     }
 
@@ -33,17 +29,12 @@ public class Player : Entity
     {
         base.FixedUpdate();
 
-        this.Move(Input.GetAxis("Horizontal"), Input.GetKey(KeyCode.S), this.shouldJump);
+        this.Move(Vector3.right * Input.GetAxis("Horizontal"), Input.GetKey(KeyCode.S), this.shouldJump);
         this.shouldJump = false;
 
         Vector3 mousePosition = this.cameraFollow.GetWorldPosition(Input.mousePosition);
-        if (mousePosition.x < this.transform.position.x && Mathf.Sign(this.transform.localScale.x) > 0)
-        {
-            Vector3 localScale = this.transform.localScale;
-            localScale.x *= -1;
-            this.transform.localScale = localScale;
-        }
-        else if (mousePosition.x > this.transform.position.x && Mathf.Sign(this.transform.localScale.x) < 0)
+        if (mousePosition.x < this.transform.position.x && Mathf.Sign(this.transform.localScale.x) > 0
+            || mousePosition.x > this.transform.position.x && Mathf.Sign(this.transform.localScale.x) < 0)
         {
             Vector3 localScale = this.transform.localScale;
             localScale.x *= -1;

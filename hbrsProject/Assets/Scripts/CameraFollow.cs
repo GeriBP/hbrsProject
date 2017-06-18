@@ -7,7 +7,6 @@ public class CameraFollow : MonoBehaviour {
     
     void Start () {
         Cursor.visible = false;
-        this.transform.parent = null;
     }
 
     private void LateUpdate()

@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class CrossAim : MonoBehaviour
+public class Crosshair : MonoBehaviour
 {
     public float radius = 100f;
 
