@@ -7,7 +7,6 @@ public class bullet : MonoBehaviour
     [SerializeField]
     float bulletSpeed;
     private Rigidbody2D myRb;
-    private bool isAlly = true;
     // Use this for initialization
     void Start()
     {
@@ -24,13 +23,19 @@ public class bullet : MonoBehaviour
     {
         myRb = GetComponent<Rigidbody2D>();
 
-        ////////!!!!!!!1
         // FIX ACURRACY
         //myRb.AddForce(new Vector2(dir.x, Random.Range(dir.y - pWeapon.acurracy, dir.y + pWeapon.acurracy)) * bulletSpeed, ForceMode2D.Impulse);
+        myRb.AddForce(new Vector2(dir.x, Random.Range(dir.y , dir.y)) * bulletSpeed, ForceMode2D.Impulse);
     }
 
-    public void setAsAlly()
+    void OnTriggerEnter2D(Collider2D other)
     {
-        isAlly = true;
+        //if(other.tag == "dajsdkjas")
+        //{
+        //    apply damage
+        //}
+        //Instantiate explosion
+        Debug.Log("trigger!!!!!!!!!!!!!!!");
+        Destroy(gameObject);
     }
 }

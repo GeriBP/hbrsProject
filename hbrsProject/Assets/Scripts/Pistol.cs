@@ -4,11 +4,14 @@ using UnityEngine;
 
 public class Pistol : MonoBehaviour {
     [SerializeField]
-    GameObject cursor, bullet, gunPoint;
+    GameObject cursor, bullet, gunPoint, nozzle;
     [SerializeField]
-    float fireRate, smoothPos;
+    float fireRate, smoothPos, intensityShoot;
+    [Header("Script References")]
     [SerializeField]
     Player playerS;
+    [SerializeField]
+    cameraShake cSh;
 
     private bool faceRight = true;
     private bool shootUp = true;
@@ -27,6 +30,23 @@ public class Pistol : MonoBehaviour {
     }
     // Update is called once per frame
     void Update () {
-		
-	}
+        if (shootUp && Input.GetAxis("Fire1") != 0.0f)
+        {
+            shootUp = false;
+            Invoke("enableShoot", fireRate);
+            cSh.Shake(intensityShoot);
+
+            dir = new Vector2(cursor.transform.position.x - transform.position.x, cursor.transform.position.y - transform.position.y).normalized;
+            float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+            //GameObject temp = Instantiate(shootExpl, nozzle.transform.position, Quaternion.AngleAxis(angle, Vector3.forward));
+            //temp.transform.SetParent(transform);
+            GameObject temp = Instantiate(bullet, nozzle.transform.position, Quaternion.AngleAxis(angle, Vector3.forward));
+            temp.SendMessage("bulletShoot", dir);
+        }
+    }
+
+    private void enableShoot()
+    {
+        shootUp = true;
+    }
 }
