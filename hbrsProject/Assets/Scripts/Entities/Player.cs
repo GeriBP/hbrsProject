@@ -5,13 +5,13 @@ using UnityEngine;
 public class Player : Entity
 {
     private bool shouldJump = false;
-    private CameraFollow cameraFollow;
+    private Transform crosshairTransform;
 
     new void Awake()
     {
         base.Awake();
 
-        this.cameraFollow = Camera.main.GetComponent<CameraFollow>();
+        this.crosshairTransform = Camera.main.transform.Find("Crosshair").transform;
     }
 
     new void Update()
@@ -32,9 +32,9 @@ public class Player : Entity
         this.Move(Vector3.right * Input.GetAxis("Horizontal"), Input.GetKey(KeyCode.S), this.shouldJump);
         this.shouldJump = false;
 
-        Vector3 mousePosition = this.cameraFollow.GetWorldPosition(Input.mousePosition);
-        if (mousePosition.x < this.transform.position.x && Mathf.Sign(this.transform.localScale.x) > 0
-            || mousePosition.x > this.transform.position.x && Mathf.Sign(this.transform.localScale.x) < 0)
+        Vector3 crosshairPosition = this.crosshairTransform.position;
+        if (crosshairPosition.x < this.transform.position.x && Mathf.Sign(this.transform.localScale.x) > 0
+            || crosshairPosition.x > this.transform.position.x && Mathf.Sign(this.transform.localScale.x) < 0)
         {
             Vector3 localScale = this.transform.localScale;
             localScale.x *= -1;
