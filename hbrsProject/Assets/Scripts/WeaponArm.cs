@@ -14,8 +14,8 @@ public class WeaponArm : MonoBehaviour {
     {
         this.transform.right = (this.cursor.transform.position - this.transform.position).normalized;
 
-        if (Mathf.Sign(this.transform.parent.localScale.x) < 0 && Mathf.Sign(this.transform.localScale.x) > 0
-            || Mathf.Sign(this.transform.parent.localScale.x) > 0 && Mathf.Sign(this.transform.localScale.x) < 0)
+        if (Mathf.Sign(this.transform.parent.parent.localScale.x) < 0 && Mathf.Sign(this.transform.localScale.x) > 0
+            || Mathf.Sign(this.transform.parent.parent.localScale.x) > 0 && Mathf.Sign(this.transform.localScale.x) < 0)
         {
             Vector3 localScale = this.transform.localScale;
             localScale.x *= -1;

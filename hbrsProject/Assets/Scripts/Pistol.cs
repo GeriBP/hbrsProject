@@ -4,12 +4,10 @@ using UnityEngine;
 
 public class Pistol : MonoBehaviour {
     [SerializeField]
-    GameObject cursor, bullet, gunPoint, nozzle;
+    GameObject cursor, bullet, nozzle;
     [SerializeField]
-    float fireRate, smoothPos, intensityShoot;
+    float fireRate, intensityShoot, accuracy;
     [Header("Script References")]
-    [SerializeField]
-    Player playerS;
     [SerializeField]
     cameraShake cSh;
 
@@ -21,13 +19,13 @@ public class Pistol : MonoBehaviour {
 		
 	}
 
-    private void FixedUpdate()
-    {
-        float tan = (cursor.transform.position.y - transform.position.y) / (cursor.transform.position.x - transform.position.x);
-        float arctan = Mathf.Rad2Deg * Mathf.Atan(tan);
-        transform.rotation = Quaternion.Euler(0, 0, arctan);
-        transform.position = Vector3.Lerp(transform.position, gunPoint.transform.position, smoothPos);
-    }
+    //private void FixedUpdate()
+    //{
+    //    float tan = (cursor.transform.position.y - transform.position.y) / (cursor.transform.position.x - transform.position.x);
+    //    float arctan = Mathf.Rad2Deg * Mathf.Atan(tan);
+    //    transform.rotation = Quaternion.Euler(0, 0, arctan);
+    //    transform.position = Vector3.Lerp(transform.position, gunPoint.transform.position, smoothPos);
+    //}
     // Update is called once per frame
     void Update () {
         if (shootUp && Input.GetAxis("Fire1") != 0.0f)
@@ -41,7 +39,7 @@ public class Pistol : MonoBehaviour {
             //GameObject temp = Instantiate(shootExpl, nozzle.transform.position, Quaternion.AngleAxis(angle, Vector3.forward));
             //temp.transform.SetParent(transform);
             GameObject temp = Instantiate(bullet, nozzle.transform.position, Quaternion.AngleAxis(angle, Vector3.forward));
-            temp.SendMessage("bulletShoot", dir);
+            temp.GetComponent<bullet>().bulletShoot(dir, accuracy);
         }
     }
 
