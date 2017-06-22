@@ -1,2 +1,1 @@
 - WeaponArm rotation is wrong if you aim straight left
-- Camera sometimes zooms on z-axis

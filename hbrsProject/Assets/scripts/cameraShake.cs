@@ -1,47 +1,37 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class cameraShake : MonoBehaviour
+public class CameraShake : MonoBehaviour
 {
+    public float shakeIntensity;
+
     private Vector3 originPosition;
     private Quaternion originRotation;
-    public float shake_decay;
-    public float shake_intensity;
-    private Quaternion iniPos;
-    // Use this for initialization
-    void Start()
+
+    public void Shake(float intensity, float duration)
     {
-        iniPos = transform.rotation;
+        this.shakeIntensity = intensity;
+        this.originPosition = this.transform.position;
+        this.originRotation = this.transform.rotation;
+        InvokeRepeating("BeginShake", 0, 0.01f);
+        Invoke("StopShake", duration);
     }
 
-    // Update is called once per frame
-    void Update()
+    private void BeginShake()
     {
-        if (shake_intensity > 0)
+        if (this.shakeIntensity> 0)
         {
-            transform.position = originPosition + Random.insideUnitSphere * shake_intensity;
-            transform.rotation = new Quaternion(
-            originRotation.x + Random.Range(-shake_intensity, shake_intensity) * .2f,
-            originRotation.y + Random.Range(-shake_intensity, shake_intensity) * .2f,
-            originRotation.z + Random.Range(-shake_intensity, shake_intensity) * .2f,
-            originRotation.w + Random.Range(-shake_intensity, shake_intensity) * .2f);
-            shake_intensity -= shake_decay;
-        }
-        else
-        {
-            shake_intensity = 0;
-            transform.rotation = iniPos;
+            Vector3 originPosition = Camera.main.transform.position;
+            Vector2 shakeOffset = Random.insideUnitCircle * this.shakeIntensity;
+            this.transform.position = new Vector3(this.transform.position.x + shakeOffset.x, this.transform.position.y + shakeOffset.y, this.transform.position.z);
+            this.transform.Rotate(Vector3.forward, Random.Range(-this.shakeIntensity, this.shakeIntensity));
         }
     }
 
-    public void Shake(float proportion)
+    private void StopShake()
     {
-        if (shake_intensity == 0)
-        {
-            originPosition = transform.position;
-            originRotation = transform.rotation;
-            shake_intensity = .2f*proportion;
-            shake_decay = 0.05f * proportion;
-        }
+        CancelInvoke("BeginShake");
+        this.transform.localPosition = this.originPosition;
+        this.transform.rotation = this.originRotation;
     }
 }
