@@ -6,7 +6,7 @@ public class Pistol : MonoBehaviour {
     [SerializeField]
     GameObject cursor, bullet, nozzle;
     [SerializeField]
-    float fireRate, intensityShoot, accuracy;
+    float fireRate, intensityShoot, accuracy, shakeTime;
     [Header("Script References")]
     [SerializeField]
     CameraShake cSh;
@@ -32,7 +32,7 @@ public class Pistol : MonoBehaviour {
         {
             shootUp = false;
             Invoke("enableShoot", fireRate);
-            cSh.Shake(intensityShoot, intensityShoot);
+            cSh.Shake(intensityShoot, shakeTime);
 
             dir = new Vector2(cursor.transform.position.x - transform.position.x, cursor.transform.position.y - transform.position.y).normalized;
             float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
