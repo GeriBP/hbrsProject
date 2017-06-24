@@ -1,9 +1,26 @@
 fileFormatVersion: 2
 guid: f8584fd0d2912d241880f5c1ab40c2d2
-timeCreated: 1498167826
+timeCreated: 1498318637
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: MeleeEnemySS_0
+    21300002: MeleeEnemySS_1
+    21300004: MeleeEnemySS_2
+    21300006: MeleeEnemySS_3
+    21300008: MeleeEnemySS_4
+    21300010: MeleeEnemySS_5
+    21300012: MeleeEnemySS_6
+    21300014: MeleeEnemySS_7
+    21300016: MeleeEnemySS_8
+    21300018: MeleeEnemySS_9
+    21300020: MeleeEnemySS_10
+    21300022: MeleeEnemySS_11
+    21300024: MeleeEnemySS_12
+    21300026: MeleeEnemySS_13
+    21300028: MeleeEnemySS_14
+    21300030: MeleeEnemySS_15
+    21300032: MeleeEnemySS_16
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -34,7 +51,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -58,9 +75,262 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: iPhone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: WebGL
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: MeleeEnemySS_0
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 315
+        width: 180
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: MeleeEnemySS_1
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 425
+        width: 89
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: MeleeEnemySS_2
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 424
+        width: 92
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: MeleeEnemySS_3
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 433
+        width: 41
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: MeleeEnemySS_4
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 252
+        width: 46
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: MeleeEnemySS_5
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 315
+        width: 47
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: MeleeEnemySS_6
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 316
+        width: 48
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: MeleeEnemySS_7
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 316
+        width: 47
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: MeleeEnemySS_8
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 155
+        width: 118
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: MeleeEnemySS_9
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 241
+        width: 50
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: MeleeEnemySS_10
+      rect:
+        serializedVersion: 2
+        x: 373
+        y: 238
+        width: 50
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: MeleeEnemySS_11
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 92
+        width: 47
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: MeleeEnemySS_12
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 94
+        width: 48
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: MeleeEnemySS_13
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 93
+        width: 47
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: MeleeEnemySS_14
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 57
+        width: 267
+        height: 176
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: MeleeEnemySS_15
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 19
+        width: 50
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: MeleeEnemySS_16
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 19
+        width: 50
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
     outline: []
   spritePackingTag: 
   userData: 
