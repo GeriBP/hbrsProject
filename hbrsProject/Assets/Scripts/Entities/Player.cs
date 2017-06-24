@@ -4,6 +4,17 @@ using UnityEngine;
 
 public class Player : Entity
 {
+    [Header("Weapon Stats")]
+    public float accuracy = 0.25f;
+    public float weaponDmgMult = 1.0f;
+    public float reloadTimeMult = 1.0f;
+    // ! Multipliers affect the damage and reload values of weapons
+
+    [Header("Ability Stats")]
+    public int maxEnergy = 200;
+    public int currentEnergy = 200;
+    public int energyRegen = 1;
+
     private bool shouldJump = false;
     private Transform crosshairTransform;
 

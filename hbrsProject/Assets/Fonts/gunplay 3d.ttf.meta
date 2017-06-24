@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 816f59c1e630f924d8cd7f929740888c
+timeCreated: 1498323568
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Gunplay
+  fontNames:
+  - Gunplay
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
