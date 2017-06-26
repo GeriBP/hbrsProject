@@ -11,8 +11,8 @@ public abstract class Entity : MonoBehaviour {
     public float jumpForce = 400f;
 
     [Header("Health")]
-    public int maxHealth = 100;
-    public int currentHealth = 100;
+    public float maxHealth = 100;
+    public float currentHealth = 100;
     public bool showHealthBar = true;
     public float healthBarOffset = 0.35f;
     public GameObject healthBarPrefab;
@@ -106,7 +106,7 @@ public abstract class Entity : MonoBehaviour {
         }
     }
 
-    public void AdjustHealth(int change)
+    public void AdjustHealth(float change)
     {
         this.currentHealth += change;
         this.currentHealth = Mathf.Clamp(this.currentHealth, 0, this.maxHealth);

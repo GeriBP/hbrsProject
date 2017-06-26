@@ -50,7 +50,13 @@ public class Enemy : Entity
             }
         }
 
-        // TODO handle localScale.x to control sprite orientation
+        if (this.rigidbody.velocity.x < 0 && Mathf.Sign(this.transform.localScale.x) > 0
+            || this.rigidbody.velocity.x > 0 && Mathf.Sign(this.transform.localScale.x) < 0)
+        {
+            Vector3 localScale = this.transform.localScale;
+            localScale.x *= -1;
+            this.transform.localScale = localScale;
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

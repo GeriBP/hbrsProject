@@ -21,7 +21,7 @@ public class CameraFollow : MonoBehaviour {
     private void LateUpdate()
     {
         Vector3 directionToCrossHair = this.crosshairTransform.position - this.target.transform.position;
-        Vector3 dynamicOffset = directionToCrossHair.normalized * Mathf.Max(0, directionToCrossHair.magnitude - this.dynamicCameraStartOffset) * this.dynamicCameraMultiplier;
+        Vector3 dynamicOffset = directionToCrossHair.normalized * Mathf.Max(0, 10 - this.dynamicCameraStartOffset) * this.dynamicCameraMultiplier;
         this.transform.position = new Vector3(this.target.position.x, this.target.position.y, this.transform.position.z) + dynamicOffset;
     }
 }

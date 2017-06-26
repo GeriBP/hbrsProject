@@ -3,8 +3,7 @@ using System.Collections;
 
 public class CameraShake : MonoBehaviour
 {
-    public float shakeIntensity;
-
+    private float shakeIntensity;
     private Vector3 originPosition;
     private Quaternion originRotation;
 

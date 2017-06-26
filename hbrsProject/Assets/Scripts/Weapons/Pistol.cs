@@ -26,7 +26,7 @@ public class Pistol : MonoBehaviour {
         magBullets = magSize;
         ammoDisp = GameObject.Find("AmmoCount").GetComponent<Text>();
         ammoDisp.text = magBullets.ToString() + "/" + magSize.ToString();
-        cSh = GameObject.Find("Main Camera").GetComponent<CameraShake>();
+        cSh = GameObject.Find("MainCamera").GetComponent<CameraShake>();
         playerS = GameObject.Find("Player").GetComponent<Player>();
     }
 
