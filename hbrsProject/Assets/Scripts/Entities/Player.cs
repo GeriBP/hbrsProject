@@ -11,12 +11,15 @@ public class Player : Entity
     // ! Multipliers affect the damage and reload values of weapons
 
     [Header("Ability Stats")]
-    public int maxEnergy = 200;
-    public int currentEnergy = 200;
-    public int energyRegen = 1;
+    public float maxEnergy = 200;
+    public float currentEnergy = 200;
+    public float energyRegen = 1;
+    public float abilityDmgMult = 1.0f;
 
     private bool shouldJump = false;
     private Transform crosshairTransform;
+
+    public static int currency = 0;
 
     new void Awake()
     {
@@ -36,12 +39,29 @@ public class Player : Entity
         }
 
         //For Debug purposes, eventually needs to b removed
-        if (Input.GetKeyDown(KeyCode.P))
+        if (Input.GetKeyDown(KeyCode.U))
         {
+            Debug.Log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+            Debug.Log("THIS ARE YOUR PLAYER STATS:");
+            Debug.Log("HP: " + maxHealth);
+            Debug.Log("MOVE SP: " + movementSpeed);
+            Debug.Log("JUMP: " + jumpForce);
+        }
+        if (Input.GetKeyDown(KeyCode.J))
+        {
+            Debug.Log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
             Debug.Log("THIS ARE YOUR WEAPON STATS:");
             Debug.Log("ACC: " + accuracy);
             Debug.Log("WEP MULT: " + weaponDmgMult);
             Debug.Log("REL MULT: " + reloadTimeMult);
+        }
+        if (Input.GetKeyDown(KeyCode.M))
+        {
+            Debug.Log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+            Debug.Log("THIS ARE YOUR ABILITY STATS:");
+            Debug.Log("ENERGY: " + maxEnergy);
+            Debug.Log("ENERGY REGEN: " + energyRegen);
+            Debug.Log("AB DMG: " + abilityDmgMult);
         }
     }
 

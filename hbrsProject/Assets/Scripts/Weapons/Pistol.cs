@@ -31,37 +31,32 @@ public class Pistol : MonoBehaviour {
         playerS = GameObject.Find("Player").GetComponent<Player>();
     }
 
-    //private void FixedUpdate()
-    //{
-    //    float tan = (cursor.transform.position.y - transform.position.y) / (cursor.transform.position.x - transform.position.x);
-    //    float arctan = Mathf.Rad2Deg * Mathf.Atan(tan);
-    //    transform.rotation = Quaternion.Euler(0, 0, arctan);
-    //    transform.position = Vector3.Lerp(transform.position, gunPoint.transform.position, smoothPos);
-    //}
     // Update is called once per frame
     void Update () {
-        if (shootUp && Input.GetKeyDown(KeyCode.Mouse0) && magBullets > 0 && !reloading)
-        {
-            magBullets--;
-            ammoDisp.text = magBullets.ToString() + "/" + magSize.ToString();
-            shootUp = false;
-            Invoke("enableShoot", fireRate);
-            cSh.Shake(intensityShoot, shakeTime);
+        if (!MenuHandler.isPaused) {
+            if (shootUp && Input.GetKeyDown(KeyCode.Mouse0) && magBullets > 0 && !reloading)
+            {
+                magBullets--;
+                ammoDisp.text = magBullets.ToString() + "/" + magSize.ToString();
+                shootUp = false;
+                Invoke("enableShoot", fireRate);
+                cSh.Shake(intensityShoot, shakeTime);
 
-            dir = new Vector2(cursor.transform.position.x - transform.position.x, cursor.transform.position.y - transform.position.y).normalized;
-            float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-            //GameObject temp = Instantiate(shootExpl, nozzle.transform.position, Quaternion.AngleAxis(angle, Vector3.forward));
-            //temp.transform.SetParent(transform);
-            GameObject temp = Instantiate(bullet, nozzle.transform.position, Quaternion.AngleAxis(angle, Vector3.forward));
-            temp.GetComponent<Bullet>().bulletShoot(dir, playerS.accuracy, playerS.weaponDmgMult);
-        }
-        else if (shootUp && Input.GetKeyDown(KeyCode.Mouse0) && magBullets == 0 && !reloading)
-        {
-            reload();
-        }
-        if (shootUp && Input.GetKeyDown(KeyCode.R) && !reloading)
-        {
-            reload();
+                dir = new Vector2(cursor.transform.position.x - transform.position.x, cursor.transform.position.y - transform.position.y).normalized;
+                float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+                //GameObject temp = Instantiate(shootExpl, nozzle.transform.position, Quaternion.AngleAxis(angle, Vector3.forward));
+                //temp.transform.SetParent(transform);
+                GameObject temp = Instantiate(bullet, nozzle.transform.position, Quaternion.AngleAxis(angle, Vector3.forward));
+                temp.GetComponent<Bullet>().bulletShoot(dir, playerS.accuracy, playerS.weaponDmgMult);
+            }
+            else if (shootUp && Input.GetKeyDown(KeyCode.Mouse0) && magBullets == 0 && !reloading)
+            {
+                reload();
+            }
+            if (shootUp && Input.GetKeyDown(KeyCode.R) && !reloading)
+            {
+                reload();
+            }
         }
     }
 
