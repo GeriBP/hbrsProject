@@ -53,7 +53,7 @@ public class Pistol : MonoBehaviour {
             //GameObject temp = Instantiate(shootExpl, nozzle.transform.position, Quaternion.AngleAxis(angle, Vector3.forward));
             //temp.transform.SetParent(transform);
             GameObject temp = Instantiate(bullet, nozzle.transform.position, Quaternion.AngleAxis(angle, Vector3.forward));
-            temp.GetComponent<bullet>().bulletShoot(dir, playerS.accuracy, playerS.weaponDmgMult);
+            temp.GetComponent<Bullet>().bulletShoot(dir, playerS.accuracy, playerS.weaponDmgMult);
         }
         else if (shootUp && Input.GetKeyDown(KeyCode.Mouse0) && magBullets == 0 && !reloading)
         {

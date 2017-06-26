@@ -73,8 +73,15 @@ public class Enemy : Entity
 
     private void Attack()
     {
-        Player player = this.playerTransform.GetComponent<Player>();
-        player.AdjustHealth(-10); 
+        if (this.attackRange > 1)
+        {
+            //GameObject temp = Instantiate(bullet, nozzle.transform.position, Quaternion.AngleAxis(angle, Vector3.forward));
+            //temp.GetComponent<Bullet>().bulletShoot(dir, playerS.accuracy, playerS.weaponDmgMult);
+        } else
+        {
+            Player player = this.playerTransform.GetComponent<Player>();
+            player.AdjustHealth(-10);
+        }
     }
 
     private void ResetAttack()

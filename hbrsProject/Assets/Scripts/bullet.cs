@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class bullet : MonoBehaviour
+public class Bullet : MonoBehaviour
 {
     [SerializeField]
     float bulletSpeed, bulletDamage;
@@ -37,6 +37,10 @@ public class bullet : MonoBehaviour
         {
             GetComponent<Player>().AdjustHealth(-bulletDamage); 
         }*/
+        if (other.tag == "Enemy")
+        {
+            other.GetComponent<Enemy>().AdjustHealth(-bulletDamage);
+        }
         Instantiate(explosion, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
