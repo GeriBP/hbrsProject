@@ -34,6 +34,15 @@ public class Player : Entity
             // Read the jump input in Update so button presses aren't missed
             this.shouldJump = Input.GetKeyDown(KeyCode.W);
         }
+
+        //For Debug purposes, eventually needs to b removed
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            Debug.Log("THIS ARE YOUR WEAPON STATS:");
+            Debug.Log("ACC: " + accuracy);
+            Debug.Log("WEP MULT: " + weaponDmgMult);
+            Debug.Log("REL MULT: " + reloadTimeMult);
+        }
     }
 
     new void FixedUpdate()

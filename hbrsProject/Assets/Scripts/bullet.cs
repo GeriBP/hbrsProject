@@ -5,16 +5,14 @@ using UnityEngine;
 public class bullet : MonoBehaviour
 {
     [SerializeField]
-    float bulletSpeed;
-    [SerializeField]
-    int bulletDamage;
+    float bulletSpeed, bulletDamage;
     [SerializeField]
     GameObject explosion;
     private Rigidbody2D myRb;
     // Use this for initialization
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
@@ -23,8 +21,9 @@ public class bullet : MonoBehaviour
 
     }
 
-    public void bulletShoot(Vector2 dir, float accuracy)
+    public void bulletShoot(Vector2 dir, float accuracy, float dmgMult)
     {
+        bulletDamage = bulletDamage * dmgMult;
         myRb = GetComponent<Rigidbody2D>();
 
         // FIX ACURRACY
@@ -34,10 +33,10 @@ public class bullet : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "Player")
+        /*if (other.tag == "Player")
         {
             GetComponent<Player>().AdjustHealth(-bulletDamage); 
-        }
+        }*/
         Instantiate(explosion, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }

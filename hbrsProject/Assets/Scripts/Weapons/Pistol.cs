@@ -7,7 +7,7 @@ public class Pistol : MonoBehaviour {
     [SerializeField]
     GameObject cursor, bullet, nozzle;
     [SerializeField]
-    float fireRate, intensityShoot, accuracy, shakeTime, reloadTime;
+    float fireRate, intensityShoot, shakeTime, reloadTime;
     [Header("Pistol Values")]
     public int magSize = 12;
 
@@ -52,7 +52,7 @@ public class Pistol : MonoBehaviour {
             //GameObject temp = Instantiate(shootExpl, nozzle.transform.position, Quaternion.AngleAxis(angle, Vector3.forward));
             //temp.transform.SetParent(transform);
             GameObject temp = Instantiate(bullet, nozzle.transform.position, Quaternion.AngleAxis(angle, Vector3.forward));
-            temp.GetComponent<bullet>().bulletShoot(dir, accuracy);
+            temp.GetComponent<bullet>().bulletShoot(dir, playerS.accuracy, playerS.weaponDmgMult);
         }
         else if (shootUp && Input.GetKeyDown(KeyCode.Mouse0) && magBullets == 0 && !reloading)
         {
