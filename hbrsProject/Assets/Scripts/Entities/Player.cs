@@ -1,15 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player : Entity
 {
-    [Header("Weapon Stats")]
-    public float accuracy = 0.25f;
-    public float weaponDmgMult = 1.0f;
-    public float reloadTimeMult = 1.0f;
-    // ! Multipliers affect the damage and reload values of weapons
-
     [Header("Ability Stats")]
     public float maxEnergy = 200;
     public float currentEnergy = 200;
@@ -17,7 +12,8 @@ public class Player : Entity
     public float abilityDmgMult = 1.0f;
 
     private bool shouldJump = false;
-    private Transform crosshairTransform;
+    private Text ammoDisplay;
+    private CameraShake cameraShake;
 
     public static int currency = 0;
 
@@ -25,7 +21,15 @@ public class Player : Entity
     {
         base.Awake();
 
-        this.crosshairTransform = Camera.main.transform.Find("Crosshair").transform;
+        this.ammoDisplay = GameObject.Find("AmmoCount").GetComponent<Text>();
+        this.cameraShake = GameObject.Find("MainCamera").GetComponent<CameraShake>();
+    }
+
+    new void Start()
+    {
+        base.Start();
+
+        this.ammoDisplay.text = this.weaponScript.currentMagazineBullets + "/" + this.weaponScript.maxMagazineBullets;
     }
 
     new void Update()
@@ -38,30 +42,42 @@ public class Player : Entity
             this.shouldJump = Input.GetKeyDown(KeyCode.W);
         }
 
+        if (Input.GetKeyDown(KeyCode.Mouse0) && this.weaponScript.TryFire())
+        {
+            this.cameraShake.Shake(this.weaponScript.shakeIntensity, this.weaponScript.shakeDuration);
+        }
+
+        if (Input.GetKeyDown(KeyCode.R) && !this.weaponScript.reloading)
+        {
+            this.weaponScript.TryReload();
+        }
+
+        this.UpdateUI();
+
         //For Debug purposes, eventually needs to b removed
         if (Input.GetKeyDown(KeyCode.U))
         {
             Debug.Log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
             Debug.Log("THIS ARE YOUR PLAYER STATS:");
-            Debug.Log("HP: " + maxHealth);
-            Debug.Log("MOVE SP: " + movementSpeed);
-            Debug.Log("JUMP: " + jumpForce);
+            Debug.Log("HP: " + this.maxHealth);
+            Debug.Log("MOVE SP: " + this.movementSpeed);
+            Debug.Log("JUMP: " + this.jumpForce);
         }
         if (Input.GetKeyDown(KeyCode.J))
         {
             Debug.Log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
             Debug.Log("THIS ARE YOUR WEAPON STATS:");
-            Debug.Log("ACC: " + accuracy);
-            Debug.Log("WEP MULT: " + weaponDmgMult);
-            Debug.Log("REL MULT: " + reloadTimeMult);
+            Debug.Log("ACC: " + this.accuracyMultiplier);
+            Debug.Log("WEP MULT: " + this.damageMultiplier);
+            Debug.Log("REL MULT: " + this.reloadSpeedMultiplier);
         }
         if (Input.GetKeyDown(KeyCode.M))
         {
             Debug.Log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
             Debug.Log("THIS ARE YOUR ABILITY STATS:");
-            Debug.Log("ENERGY: " + maxEnergy);
-            Debug.Log("ENERGY REGEN: " + energyRegen);
-            Debug.Log("AB DMG: " + abilityDmgMult);
+            Debug.Log("ENERGY: " + this.maxEnergy);
+            Debug.Log("ENERGY REGEN: " + this.energyRegen);
+            Debug.Log("AB DMG: " + this.abilityDmgMult);
         }
     }
 
@@ -71,14 +87,10 @@ public class Player : Entity
 
         this.Move(Vector3.right * Input.GetAxis("Horizontal"), Input.GetKey(KeyCode.S), this.shouldJump);
         this.shouldJump = false;
+    }
 
-        Vector3 crosshairPosition = this.crosshairTransform.position;
-        if (crosshairPosition.x < this.transform.position.x && Mathf.Sign(this.transform.localScale.x) > 0
-            || crosshairPosition.x > this.transform.position.x && Mathf.Sign(this.transform.localScale.x) < 0)
-        {
-            Vector3 localScale = this.transform.localScale;
-            localScale.x *= -1;
-            this.transform.localScale = localScale;
-        }
+    private void UpdateUI()
+    {
+        this.ammoDisplay.text = this.weaponScript.reloading ? "RELOADING" : this.weaponScript.currentMagazineBullets + "/" + this.weaponScript.maxMagazineBullets;
     }
 }

@@ -1,2 +1,3 @@
 - WeaponArm rotation is wrong if you aim straight left
--Moving the cursor affects the background Quad offset?
+- Melee enemies have wront weapon rotation
+- Head stucks on upper floors

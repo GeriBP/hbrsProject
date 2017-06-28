@@ -9,19 +9,8 @@ public class Bullet : MonoBehaviour
     [SerializeField]
     GameObject explosion;
     private Rigidbody2D myRb;
-    // Use this for initialization
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
-    public void bulletShoot(Vector2 dir, float accuracy, float dmgMult)
+    public void BulletShoot(Vector2 dir, float accuracy, float dmgMult)
     {
         bulletDamage = bulletDamage * dmgMult;
         myRb = GetComponent<Rigidbody2D>();
@@ -33,15 +22,24 @@ public class Bullet : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        /*if (other.tag == "Player")
+        if (other.tag == "Player")
         {
-            GetComponent<Player>().AdjustHealth(-bulletDamage); 
-        }*/
-        if (other.tag == "Enemy")
+            other.GetComponent<Player>().AdjustHealth(-bulletDamage);
+        }
+        else if (other.tag == "Enemy")
         {
             other.GetComponent<Enemy>().AdjustHealth(-bulletDamage);
         }
-        Instantiate(explosion, transform.position, Quaternion.identity);
-        Destroy(gameObject);
+
+        if (this.explosion)
+        {
+            Instantiate(explosion, transform.position, Quaternion.identity);
+            GameObject.Destroy(this.gameObject);
+        }
+    }
+
+    private void OnBecameInvisible()
+    {
+        GameObject.Destroy(this.gameObject);
     }
 }

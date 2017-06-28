@@ -17,15 +17,24 @@ public abstract class Entity : MonoBehaviour {
     public float healthBarOffset = 0.35f;
     public GameObject healthBarPrefab;
 
+    [Header("Weapon")]
+    public GameObject weaponPrefab;
+    public Transform aimingTarget;
+    public float damageMultiplier = 1;
+    public float accuracyMultiplier = 1;
+    public float reloadSpeedMultiplier = 1;
+
     private Transform groundCheck;
     private Transform ceilingCheck;
     private GameObject healthBar;
     private Slider healthBarSlider;
-    
+
     protected new Rigidbody2D rigidbody;
     protected Animator animator;
     protected bool grounded = false;
     protected bool crouched = false;
+    protected GameObject weapon;
+    protected Weapon weaponScript;
 
     protected void Awake()
     {
@@ -38,10 +47,17 @@ public abstract class Entity : MonoBehaviour {
     protected void Start () {
         if (this.showHealthBar)
         {
-            this.healthBar = GameObject.Instantiate(this.healthBarPrefab);
-            this.healthBar.transform.SetParent(this.transform);
+            this.healthBar = GameObject.Instantiate(this.healthBarPrefab, this.transform);
             this.healthBar.transform.position = this.transform.position + Vector3.up * this.healthBarOffset;
             this.healthBarSlider = this.healthBar.GetComponentInChildren<Slider>();
+        }
+
+        if (this.weaponPrefab)
+        {
+            this.weapon = GameObject.Instantiate(this.weaponPrefab, this.transform);
+            this.weapon.transform.position = this.transform.Find("WeaponAttach").position;
+            this.weaponScript = this.weapon.GetComponent<Weapon>();
+            this.weaponScript.entity = this;
         }
     }
 
@@ -53,11 +69,21 @@ public abstract class Entity : MonoBehaviour {
             return;
         }
 
+        Vector3 aimingTargetPosition = this.aimingTarget.position;
+        if (aimingTargetPosition.x < this.transform.position.x && Mathf.Sign(this.transform.localScale.x) > 0
+            || aimingTargetPosition.x > this.transform.position.x && Mathf.Sign(this.transform.localScale.x) < 0)
+        {
+            Vector3 localScale = this.transform.localScale;
+            localScale.x *= -1;
+            this.transform.localScale = localScale;
+        }
+
         this.grounded = this.rigidbody.gravityScale > 0 && Physics2D.Linecast(this.groundCheck.position, this.groundCheck.position + Vector3.down * 0.01f, 1 << LayerMask.NameToLayer("Ground"));
         if (this.animator)
         {
             this.animator.SetBool("grounded", this.grounded);
             this.animator.SetFloat("verticalSpeed", this.rigidbody.velocity.y);
+            this.animator.SetFloat("speed", Mathf.Abs(this.rigidbody.velocity.x));
         }
     }
 
@@ -69,7 +95,7 @@ public abstract class Entity : MonoBehaviour {
         }
     }
 
-    public void Move(Vector3 movementDirection, bool crouch, bool jump)
+    protected void Move(Vector3 movementDirection, bool crouch, bool jump)
     {
         if (!crouch && this.crouched)
         {
@@ -102,7 +128,6 @@ public abstract class Entity : MonoBehaviour {
         {
             this.animator.SetBool("grounded", this.grounded);
             this.animator.SetBool("crouched", this.crouched);
-            this.animator.SetFloat("speed", Mathf.Abs(this.rigidbody.velocity.x));
         }
     }
 

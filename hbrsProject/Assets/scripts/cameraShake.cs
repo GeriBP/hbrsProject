@@ -23,7 +23,7 @@ public class CameraShake : MonoBehaviour
             Vector3 originPosition = Camera.main.transform.position;
             Vector2 shakeOffset = Random.insideUnitCircle * this.shakeIntensity;
             this.transform.position = new Vector3(this.transform.position.x + shakeOffset.x, this.transform.position.y + shakeOffset.y, this.transform.position.z);
-            this.transform.Rotate(Vector3.forward, Random.Range(-this.shakeIntensity, this.shakeIntensity));
+            this.transform.Rotate(Vector3.forward, Random.Range(-this.shakeIntensity / 2, this.shakeIntensity / 2));
         }
     }
 
