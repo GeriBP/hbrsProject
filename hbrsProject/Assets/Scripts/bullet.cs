@@ -16,8 +16,7 @@ public class Bullet : MonoBehaviour
         myRb = GetComponent<Rigidbody2D>();
 
         // FIX ACURRACY
-        myRb.AddForce(new Vector2(dir.x, Random.Range(dir.y - accuracy, dir.y + accuracy)) * bulletSpeed, ForceMode2D.Impulse);
-        //myRb.AddForce(new Vector2(dir.x, Random.Range(dir.y , dir.y)) * bulletSpeed, ForceMode2D.Impulse);
+        myRb.AddForce(new Vector2(Random.Range(dir.x - accuracy, dir.x + accuracy), Random.Range(dir.y - accuracy, dir.y + accuracy)) * bulletSpeed, ForceMode2D.Impulse);
     }
 
     void OnTriggerEnter2D(Collider2D other)

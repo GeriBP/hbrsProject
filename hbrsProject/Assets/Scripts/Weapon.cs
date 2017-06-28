@@ -45,7 +45,7 @@ public class Weapon : MonoBehaviour {
 
     public bool TryFire()
     {
-        if (!this.canFire || this.currentMagazineBullets == 0) return false;
+        if (!this.canFire || this.currentMagazineBullets == 0 || MenuHandler.isPaused) return false;
 
         Invoke("ResetFire", this.cooldown);
         this.canFire = false;

@@ -79,6 +79,10 @@ public class Player : Entity
             Debug.Log("ENERGY REGEN: " + this.energyRegen);
             Debug.Log("AB DMG: " + this.abilityDmgMult);
         }
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            UpgradeManager.money = UpgradeManager.money + 1000;
+        }
     }
 
     new void FixedUpdate()
