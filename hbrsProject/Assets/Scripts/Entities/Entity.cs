@@ -24,6 +24,9 @@ public abstract class Entity : MonoBehaviour {
     public float accuracyMultiplier = 1;
     public float reloadSpeedMultiplier = 1;
 
+    [HideInInspector]
+    public Weapon weaponScript;
+
     private Transform groundCheck;
     private Transform ceilingCheck;
     private GameObject healthBar;
@@ -34,7 +37,6 @@ public abstract class Entity : MonoBehaviour {
     protected bool grounded = false;
     protected bool crouched = false;
     protected GameObject weapon;
-    protected Weapon weaponScript;
 
     protected void Awake()
     {
