@@ -79,6 +79,7 @@ public class UpgradeManager : MonoBehaviour {
             money = money - hpCost;
             hpLvl++;
             playerS.maxHealth += hpInc;
+            playerS.currentHealth = playerS.maxHealth;
             hpCost = (int)Mathf.Round((float)hpCost * (float)(1 + (hpLvl * upradeInc))/ 10.0f) * 10;
             if(hpLvl < 5) hpTxtC.text = costStr + hpCost.ToString();
             else hpTxtC.text = "MAX\n LEVEL";
