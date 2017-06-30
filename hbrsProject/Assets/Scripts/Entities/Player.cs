@@ -1,100 +1,43 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
-
-public class Player : Entity
-{
-    [Header("Ability Stats")]
-    public float maxEnergy = 200;
-    public float currentEnergy = 200;
-    public float energyRegen = 1;
-    public float abilityDmgMult = 1.0f;
-
-    private bool shouldJump = false;
-    private Text ammoDisplay;
-    private CameraShake cameraShake;
-
-    public static int currency = 0;
-
-    new void Awake()
-    {
-        base.Awake();
-
-        this.ammoDisplay = GameObject.Find("AmmoCount").GetComponent<Text>();
-        this.cameraShake = GameObject.Find("MainCamera").GetComponent<CameraShake>();
-    }
-
-    new void Start()
-    {
-        base.Start();
-
-        this.ammoDisplay.text = this.weaponScript.currentMagazineBullets + "/" + this.weaponScript.maxMagazineBullets;
-    }
-
-    new void Update()
-    {
-        base.Update();
-
-        if (!this.shouldJump)
-        {
-            // Read the jump input in Update so button presses aren't missed
-            this.shouldJump = Input.GetKeyDown(KeyCode.W);
-        }
-
-        if (Input.GetKeyDown(KeyCode.Mouse0) && this.weaponScript.TryFire())
-        {
-            this.cameraShake.Shake(this.weaponScript.shakeIntensity, this.weaponScript.shakeDuration);
-        }
-
-        if (Input.GetKeyDown(KeyCode.R) && !this.weaponScript.reloading)
-        {
-            this.weaponScript.TryReload();
-        }
-
-        this.UpdateUI();
-
-        //For Debug purposes, eventually needs to b removed
-        if (Input.GetKeyDown(KeyCode.U))
-        {
-            Debug.Log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
-            Debug.Log("THIS ARE YOUR PLAYER STATS:");
-            Debug.Log("HP: " + this.maxHealth);
-            Debug.Log("MOVE SP: " + this.movementSpeed);
-            Debug.Log("JUMP: " + this.jumpForce);
-        }
-        if (Input.GetKeyDown(KeyCode.J))
-        {
-            Debug.Log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
-            Debug.Log("THIS ARE YOUR WEAPON STATS:");
-            Debug.Log("ACC: " + this.accuracyMultiplier);
-            Debug.Log("WEP MULT: " + this.damageMultiplier);
-            Debug.Log("REL MULT: " + this.reloadSpeedMultiplier);
-        }
-        if (Input.GetKeyDown(KeyCode.M))
-        {
-            Debug.Log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
-            Debug.Log("THIS ARE YOUR ABILITY STATS:");
-            Debug.Log("ENERGY: " + this.maxEnergy);
-            Debug.Log("ENERGY REGEN: " + this.energyRegen);
-            Debug.Log("AB DMG: " + this.abilityDmgMult);
-        }
-        if (Input.GetKeyDown(KeyCode.C))
-        {
-            UpgradeManager.money = UpgradeManager.money + 1000;
-        }
-    }
-
-    new void FixedUpdate()
-    {
-        base.FixedUpdate();
-
-        this.Move(Vector3.right * Input.GetAxis("Horizontal"), Input.GetKey(KeyCode.S), this.shouldJump);
-        this.shouldJump = false;
-    }
-
-    private void UpdateUI()
-    {
-        this.ammoDisplay.text = this.weaponScript.reloading ? "RELOADING" : this.weaponScript.currentMagazineBullets + "/" + this.weaponScript.maxMagazineBullets;
-    }
-}
+﻿using System.Collections;using System.Collections.Generic;using System.Linq;using UnityEngine;using UnityEngine.UI;public class Player : Entity{    [Header("Energy")]    public GameObject energyBarPrefab;    public float maxEnergy = 200;    public float currentEnergy = 200;    public float energyRegenerationMultiplier = 1;    public float abilityMultiplier = 1.0f;    private bool shouldJump = false;    private Text ammoDisplay;    private CameraShake cameraShake;    private GameObject energyBar;    private Slider energyBarSlider;    private Image energyBarFill;    private Ability abilityScript;    public static int currency = 0;    new void Awake()    {        base.Awake();        this.ammoDisplay = GameObject.Find("AmmoCount").GetComponent<Text>();        this.cameraShake = GameObject.Find("MainCamera").GetComponent<CameraShake>();    }    new void Start()    {        base.Start();        this.ammoDisplay.text = this.weaponScript.currentMagazineBullets + "/" + this.weaponScript.maxMagazineBullets;        this.energyBar = GameObject.Instantiate(this.energyBarPrefab, this.transform);        this.energyBar.transform.position = this.transform.position + Vector3.up * (this.healthBarOffset - 0.2f);        this.energyBarSlider = this.energyBar.GetComponentInChildren<Slider>();        this.energyBarFill = this.energyBar.GetComponentsInChildren<Image>().FirstOrDefault(image => image.name == "Fill");        if (this.weapon)        {            this.abilityScript = this.weapon.GetComponent("Ability") as Ability;            this.abilityScript.player = this;        }    }    new void Update()    {        base.Update();        if (!this.shouldJump)        {            // Read the jump input in Update so button presses aren't missed            this.shouldJump = Input.GetKeyDown(KeyCode.W);        }        if (Input.GetKeyDown(KeyCode.Mouse0) && this.abilityScript.canFire && this.weaponScript.TryFire())        {            this.cameraShake.Shake(this.weaponScript.shakeIntensity, this.weaponScript.shakeDuration);        }        if (Input.GetKeyDown(KeyCode.Mouse1) && this.abilityScript.TryFire())        {            this.cameraShake.Shake(this.weaponScript.shakeIntensity, this.weaponScript.shakeDuration);        }        if (Input.GetKeyDown(KeyCode.R) && !this.weaponScript.reloading)        {            this.weaponScript.TryReload();        }        this.UpdateUI();        //For Debug purposes, eventually needs to b removed        if (Input.GetKeyDown(KeyCode.U))        {            Debug.Log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!");            Debug.Log("THIS ARE YOUR PLAYER STATS:");            Debug.Log("HP: " + this.maxHealth);            Debug.Log("MOVE SP: " + this.movementSpeed);            Debug.Log("JUMP: " + this.jumpForce);        }
+        if (Input.GetKeyDown(KeyCode.J))
+        {
+            Debug.Log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+            Debug.Log("THIS ARE YOUR WEAPON STATS:");
+            Debug.Log("ACC: " + this.accuracyMultiplier);
+            Debug.Log("WEP MULT: " + this.damageMultiplier);
+            Debug.Log("REL MULT: " + this.reloadSpeedMultiplier);
+        }
+        if (Input.GetKeyDown(KeyCode.M))
+        {
+            Debug.Log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+            Debug.Log("THIS ARE YOUR ABILITY STATS:");
+            Debug.Log("ENERGY: " + this.maxEnergy);
+            Debug.Log("ENERGY REGEN: " + this.energyRegenerationMultiplier);
+            Debug.Log("AB DMG: " + this.abilityMultiplier);
+        }
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            UpgradeManager.money = UpgradeManager.money + 1000;
+        }
+
+        this.currentEnergy = Mathf.Lerp(this.currentEnergy, this.maxEnergy, Time.deltaTime * this.energyRegenerationMultiplier * 0.1f);
+        if (!this.abilityScript.CanFire())
+            this.energyBarFill.color = Color.gray;
+        else
+            this.energyBarFill.color = Color.yellow;
+        this.energyBarSlider.value = this.currentEnergy / (float)this.maxEnergy;
+    }
+
+    new void FixedUpdate()
+    {
+        base.FixedUpdate();
+
+        this.Move(Vector3.right * Input.GetAxis("Horizontal"), Input.GetKey(KeyCode.S), this.shouldJump);
+        this.shouldJump = false;
+    }
+
+    private void UpdateUI()
+    {
+        this.ammoDisplay.text = this.weaponScript.reloading ? "RELOADING" : this.weaponScript.currentMagazineBullets + "/" + this.weaponScript.maxMagazineBullets;
+    }
+}

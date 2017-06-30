@@ -7,6 +7,8 @@ public class Weapon : MonoBehaviour {
     public Entity entity;
     [HideInInspector]
     public bool reloading = false;
+    [HideInInspector]
+    public Ability abilityScript;
     public GameObject bullet;
     public float range = 10;
     public float cooldown = 1;
