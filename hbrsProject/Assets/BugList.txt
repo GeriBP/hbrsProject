@@ -1,3 +1,4 @@
 - WeaponArm rotation is wrong if you aim straight left
 - Melee enemies have wrong weapon rotation
 - No health bar on enemies (sorry I don't know how I broke it and dindn't have time to look into it :( )
+- On the FirstLevel Scene you can't click the buttons on the upgrade menu. On the player scene you can.
