@@ -1,3 +1,3 @@
 - WeaponArm rotation is wrong if you aim straight left
 - Melee enemies have wrong weapon rotation
-- Head stucks on upper floors
+- No health bar on enemies (sorry I don't know how I broke it and dindn't have time to look into it :( )
