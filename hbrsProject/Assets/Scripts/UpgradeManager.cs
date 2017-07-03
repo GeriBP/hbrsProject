@@ -103,7 +103,7 @@ public class UpgradeManager : MonoBehaviour {
             modMoney(-msCost);
             msCost = (int)Mathf.Round((float)msCost * (float)(1 + (msLvl * upradeInc)) / 10.0f) * 10;
             msLvl++;
-            if (msLvl < 5) hpTxtC.text = costStr + msCost.ToString();
+            if (msLvl < 5) msTxtC.text = costStr + msCost.ToString();
             else msTxtC.text = "MAX\n LEVEL";
             msTxt.text = msLvl.ToString() + "/5";
 

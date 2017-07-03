@@ -15,6 +15,7 @@ public abstract class Entity : MonoBehaviour {
     public float currentHealth = 100;
     public float healthBarOffset = 0.35f;
     public GameObject healthBarPrefab;
+    public GameObject hitEffectPrefab;
 
     [Header("Weapon")]
     public GameObject weaponPrefab;

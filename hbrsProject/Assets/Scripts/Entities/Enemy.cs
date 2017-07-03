@@ -40,7 +40,7 @@ public class Enemy : Entity
     private void OnCollisionEnter2D(Collision2D collision)
     {
         Vector3 dir = new Vector3(collision.contacts[0].point.x, collision.contacts[0].point.y, 0) - this.transform.position;
-        if (collision.gameObject.tag != "Player" && dir.x != 0)
+        if (dir.x != 0)
             this.movementDirection *= -1;
     }
 }
