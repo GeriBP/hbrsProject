@@ -19,20 +19,18 @@ public class Bullet : MonoBehaviour
         myRb.AddForce(new Vector2(Random.Range(dir.x - accuracy, dir.x + accuracy), Random.Range(dir.y - accuracy, dir.y + accuracy)) * bulletSpeed, ForceMode2D.Impulse);
     }
 
-    void OnTriggerEnter2D(Collider2D other)
+    void OnTriggerEnter2D(Collider2D collision)
     {
-        if (other.tag == "Player")
-        {
-            other.GetComponent<Player>().AdjustHealth(-bulletDamage);
-        }
-        else if (other.tag == "Enemy")
-        {
-            other.GetComponent<Enemy>().AdjustHealth(-bulletDamage);
-        }
+        Entity entity = collision.GetComponent("Entity") as Entity;
+        if (entity == null) return;
 
+        entity.AdjustHealth(-bulletDamage);
+
+        GameObject.Instantiate(entity.hitEffectPrefab, this.transform.position, this.transform.rotation);
+        
         if (this.explosion)
         {
-            Instantiate(explosion, transform.position, Quaternion.identity);
+            GameObject.Instantiate(this.explosion, transform.position, Quaternion.identity);
             GameObject.Destroy(this.gameObject);
         }
     }

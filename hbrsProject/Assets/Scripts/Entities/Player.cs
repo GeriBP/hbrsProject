@@ -2,7 +2,7 @@
     public int pistolBullets;    public int rifleBullets;    private bool canSwap = true;
     private bool shouldJump = false;    private Text ammoDisplay;    private CameraShake cameraShake;    private GameObject energyBar;    private Slider energyBarSlider;    private Image energyBarFill;    private Ability abilityScript;    private UpgradeManager upgradeManagerScript;    public static int currency = 0;    new void Awake()    {        base.Awake();        this.ammoDisplay = GameObject.Find("AmmoCount").GetComponent<Text>();        this.cameraShake = GameObject.Find("MainCamera").GetComponent<CameraShake>();        this.upgradeManagerScript = GameObject.Find("GameMenus").GetComponent<UpgradeManager>();    }    new void Start()    {        base.Start();        this.ammoDisplay.text = this.weaponScript.currentMagazineBullets + "/" + this.weaponScript.maxMagazineBullets;        this.energyBar = GameObject.Instantiate(this.energyBarPrefab, this.transform);        this.energyBar.transform.position = this.transform.position + Vector3.up * (this.healthBarOffset - 0.2f);        this.energyBarSlider = this.energyBar.GetComponentInChildren<Slider>();        this.energyBarFill = this.energyBar.GetComponentsInChildren<Image>().FirstOrDefault(image => image.name == "Fill");        if (this.weapon)        {            this.abilityScript = this.weapon.GetComponent("Ability") as Ability;            this.abilityScript.player = this;        }    }    new void Update()    {        base.Update();        if (!this.shouldJump)        {            // Read the jump input in Update so button presses aren't missed            this.shouldJump = Input.GetKeyDown(KeyCode.W);        }        if (Input.GetKey(KeyCode.Mouse0) && this.abilityScript.canFire && this.weaponScript.TryFire())        {            this.cameraShake.Shake(this.weaponScript.shakeIntensity, this.weaponScript.shakeDuration);        }        if (Input.GetKeyDown(KeyCode.Mouse1) && this.abilityScript.TryFire())        {            this.cameraShake.Shake(this.weaponScript.shakeIntensity, this.weaponScript.shakeDuration);        }        if (Input.GetKeyDown(KeyCode.R) && !this.weaponScript.reloading)        {            this.weaponScript.TryReload();        }        this.UpdateUI();
 
-        if (Input.GetAxis("Mouse ScrollWheel") > 0f && currentWep != 2 && !this.weaponScript.reloading) //next Weapon
+        if ((Input.GetAxis("Mouse ScrollWheel") > 0f) || (Input.GetKeyDown(KeyCode.Alpha2)) && currentWep != 2 && !this.weaponScript.reloading) //next Weapon
         {
             canSwap = false;
             Invoke("EnableSwap", 0.5f);
@@ -13,7 +13,7 @@
             this.weaponScript.currentMagazineBullets = rifleBullets;
             currentWep = 2;
         }
-        else if (Input.GetAxis("Mouse ScrollWheel") < 0f && currentWep != 1 && !this.weaponScript.reloading) //previous Weapon
+        else if ((Input.GetAxis("Mouse ScrollWheel") < 0f) || (Input.GetKeyDown(KeyCode.Alpha1)) && currentWep != 1 && !this.weaponScript.reloading) //previous Weapon
         {
             canSwap = false;
             Invoke("EnableSwap", 0.5f);
