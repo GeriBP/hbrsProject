@@ -6,9 +6,18 @@ public class CheckPoint : MonoBehaviour {
     private MenuHandler menuScript;
     [Header("Interact Key display GO")]
     public GameObject interactSprite;
+    private bool canEnter = false;
     // Use this for initialization
     void Start () {
         menuScript = GameObject.Find("GameMenus").GetComponent<MenuHandler>();
+    }
+
+    private void Update()
+    {
+        if (canEnter && Input.GetKeyDown(KeyCode.E))
+        {
+            menuScript.CheckPOpen();
+        }
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -16,6 +25,7 @@ public class CheckPoint : MonoBehaviour {
         if (other.tag == "Player")
         {
             interactSprite.SetActive(true);
+            canEnter = true;
         }
     }
 
@@ -24,19 +34,7 @@ public class CheckPoint : MonoBehaviour {
         if (other.tag == "Player")
         {
             interactSprite.SetActive(false);
+            canEnter = false;
         }
     }
-
-    void OnTriggerStay2D(Collider2D other)
-    {
-        if (other.tag == "Player" && Input.GetKeyDown(KeyCode.E))
-        {
-            menuScript.UpgradeOpen();
-        }
-    }
-    //On trigger enter display E on Players
-
-    //On trigger stay and E open upgrade
-
-    //Add exit to uprade
 }

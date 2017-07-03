@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MenuHandler : MonoBehaviour {
     [SerializeField]
-    GameObject pauseMenu, upgradeMenu;
+    GameObject pauseMenu, upgradeMenu, checkPMenu;
 
     private Animator upgradeAnim;
 
@@ -59,20 +59,36 @@ public class MenuHandler : MonoBehaviour {
 
     public void UpgradeOpen()
     {
-        upgradeAnim.SetTrigger("down");
-        Cursor.visible = true;
-        upgrade = true;
+        Time.timeScale = 1.0f;
         Invoke("freezeTime", 1.0f);
-        isPaused = true;
+        upgradeAnim.SetTrigger("down");
+        upgrade = true;
+        checkPMenu.SetActive(false);
     }
 
     public void UpgradeClose()
     {
         Time.timeScale = 1.0f;
         upgradeAnim.SetTrigger("up");
-        Cursor.visible = false;
         upgrade = false;
+        Cursor.visible = false;
         isPaused = false;
+    }
+
+    public void CheckPOpen()
+    {
+        freezeTime();
+        checkPMenu.SetActive(true);
+        Cursor.visible = true;
+        isPaused = true;
+    }
+
+    public void CheckPClose()
+    {
+        checkPMenu.SetActive(false);
+        Cursor.visible = false;
+        isPaused = false;
+        Time.timeScale = 1.0f;
     }
 
 }

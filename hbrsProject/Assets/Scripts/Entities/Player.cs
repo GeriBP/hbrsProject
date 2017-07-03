@@ -58,9 +58,12 @@
 
     new void FixedUpdate()
     {
-        base.FixedUpdate();
-
-        this.Move(Vector3.right * Input.GetAxis("Horizontal"), Input.GetKey(KeyCode.S), this.shouldJump);
+        base.FixedUpdate();
+
+
+        // Condition to prevent player from walking during menus
+        //(when time is not freezed when the upgrade menu is coming down)
+        if(!MenuHandler.isPaused) this.Move(Vector3.right * Input.GetAxis("Horizontal"), Input.GetKey(KeyCode.S), this.shouldJump);
         this.shouldJump = false;
     }
 
