@@ -36,19 +36,11 @@ public class MenuHandler : MonoBehaviour {
         //Temp
         if (Input.GetKeyDown(KeyCode.P) && !isPaused && !upgrade)
         {
-            upgradeAnim.SetTrigger("down");
-            Cursor.visible = true;
-            upgrade = true;
-            Invoke("freezeTime", 1.0f);
-            isPaused = true;
+            UpgradeOpen();
         }
         else if (Input.GetKeyDown(KeyCode.P) && isPaused && upgrade)
         {
-            Time.timeScale = 1.0f;
-            upgradeAnim.SetTrigger("up");
-            Cursor.visible = false;
-            upgrade = false;
-            isPaused = false;
+            UpgradeClose();
         }
     }
 
@@ -63,6 +55,24 @@ public class MenuHandler : MonoBehaviour {
         isPaused = false;
         Cursor.visible = false;
         Time.timeScale = 1.0f;
+    }
+
+    public void UpgradeOpen()
+    {
+        upgradeAnim.SetTrigger("down");
+        Cursor.visible = true;
+        upgrade = true;
+        Invoke("freezeTime", 1.0f);
+        isPaused = true;
+    }
+
+    public void UpgradeClose()
+    {
+        Time.timeScale = 1.0f;
+        upgradeAnim.SetTrigger("up");
+        Cursor.visible = false;
+        upgrade = false;
+        isPaused = false;
     }
 
 }
