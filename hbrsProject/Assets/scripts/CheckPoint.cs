@@ -7,6 +7,7 @@ public class CheckPoint : MonoBehaviour {
     [Header("Interact Key display GO")]
     public GameObject interactSprite;
     private bool canEnter = false;
+    private Player playerS;
     // Use this for initialization
     void Start () {
         menuScript = GameObject.Find("GameMenus").GetComponent<MenuHandler>();
@@ -17,6 +18,9 @@ public class CheckPoint : MonoBehaviour {
         if (canEnter && Input.GetKeyDown(KeyCode.E))
         {
             menuScript.CheckPOpen();
+            playerS = GameObject.Find("Player").GetComponent<Player>();
+            playerS.currentHealth = playerS.maxHealth;
+            playerS.currentEnergy = playerS.maxEnergy;
         }
     }
 
