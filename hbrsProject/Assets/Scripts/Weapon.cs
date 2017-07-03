@@ -45,6 +45,12 @@ public class Weapon : MonoBehaviour {
             localScale.y *= -1;
             this.transform.localScale = localScale;
         }
+
+        //Bug fix
+        if (transform.localEulerAngles.y != 0.0f)
+        {
+            transform.localEulerAngles = new Vector3(0.0f, 0.0f, -179.9f);
+        }
     }
 
     public bool TryFire()
