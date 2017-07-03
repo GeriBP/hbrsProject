@@ -13,7 +13,6 @@ public abstract class Entity : MonoBehaviour {
     [Header("Health")]
     public float maxHealth = 100;
     public float currentHealth = 100;
-    public bool showHealthBar = true;
     public float healthBarOffset = 0.35f;
     public GameObject healthBarPrefab;
 
@@ -47,7 +46,7 @@ public abstract class Entity : MonoBehaviour {
     }
 
     protected void Start () {
-        if (this.showHealthBar)
+        if (this.healthBarPrefab)
         {
             this.healthBar = GameObject.Instantiate(this.healthBarPrefab, this.transform);
             this.healthBar.transform.position = this.transform.position + Vector3.up * this.healthBarOffset;
@@ -91,7 +90,7 @@ public abstract class Entity : MonoBehaviour {
 
     protected void Update()
     {
-        if (this.showHealthBar)
+        if (this.healthBarPrefab)
         {
             this.healthBarSlider.value = this.currentHealth / (float)this.maxHealth;
         }

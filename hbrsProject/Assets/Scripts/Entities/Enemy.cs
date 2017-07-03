@@ -5,10 +5,14 @@ using UnityEngine;
 public class Enemy : Entity
 {
     private Vector3 movementDirection = Vector3.left;
+
     new void Start()    {
+        base.Start();
+
         this.aimingTarget = GameObject.Find("Player").transform;
     }
-        new void Update()
+
+    new void Update()
     {
         base.Update();
 

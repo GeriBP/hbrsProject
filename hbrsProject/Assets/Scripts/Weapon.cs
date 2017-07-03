@@ -10,7 +10,7 @@ public class Weapon : MonoBehaviour {
     [HideInInspector]
     public Ability abilityScript;
     public GameObject bullet;
-    public GameObject bulletExplsion;
+    public GameObject nozzleFlash;
     public float range = 10;
     public float cooldown = 1;
     public float accuracy;
@@ -70,8 +70,12 @@ public class Weapon : MonoBehaviour {
         Vector3 direction = (this.entity.aimingTarget.position - bulletOrigin).normalized;
         GameObject bullet = GameObject.Instantiate(this.bullet, bulletOrigin, Quaternion.AngleAxis(Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg, Vector3.forward));
         bullet.GetComponent<Bullet>().BulletShoot(direction, this.accuracy * this.entity.accuracyMultiplier, this.entity.damageMultiplier);
-        GameObject explosion = GameObject.Instantiate(this.bulletExplsion, bulletOrigin, Quaternion.AngleAxis(Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg, Vector3.forward));
-        explosion.transform.SetParent(nozzleTransform);
+
+        if (this.nozzleFlash)
+        {
+            GameObject nozzleFlash = GameObject.Instantiate(this.nozzleFlash, bulletOrigin, Quaternion.AngleAxis(Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg, Vector3.forward));
+            nozzleFlash.transform.SetParent(nozzleTransform);
+        }
 
         if (this.currentMagazineBullets == 0)
         {

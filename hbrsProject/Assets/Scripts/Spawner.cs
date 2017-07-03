@@ -14,7 +14,5 @@ public class Spawner : MonoBehaviour {
     private void Spawn()
     {
         GameObject enemy = GameObject.Instantiate(this.enemy, this.transform.position, Quaternion.LookRotation(Vector3.forward));
-        Enemy enemyScript = enemy.GetComponent<Enemy>();
-        enemyScript.aimingTarget = GameObject.Find("Player").transform;
     }
 }
