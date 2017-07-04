@@ -21,18 +21,17 @@ public class Bullet : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        Entity entity = collision.GetComponent("Entity") as Entity;
-        if (entity == null) return;
-
-        entity.AdjustHealth(-bulletDamage);
-
-        GameObject.Instantiate(entity.hitEffectPrefab, this.transform.position, this.transform.rotation);
-        
         if (this.explosion)
         {
             GameObject.Instantiate(this.explosion, transform.position, Quaternion.identity);
             GameObject.Destroy(this.gameObject);
         }
+
+        Entity entity = collision.GetComponent("Entity") as Entity;
+        if (entity == null) return;
+
+        entity.AdjustHealth(-bulletDamage);
+        GameObject.Instantiate(entity.hitEffectPrefab, this.transform.position, this.transform.rotation);
     }
 
     private void OnBecameInvisible()
