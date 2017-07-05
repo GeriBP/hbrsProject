@@ -37,7 +37,7 @@ public abstract class Entity : MonoBehaviour {
     protected bool grounded = false;
     protected bool crouched = false;
     protected GameObject currentWeapon;
-    protected int currentWeaponIndex = 0;
+    protected int currentWeaponIndex = -1;
     protected bool canSwitchWeapon = true;
 
     protected void Awake()
@@ -58,10 +58,7 @@ public abstract class Entity : MonoBehaviour {
 
         if (this.weaponPrefabs.Length > 0)
         {
-            this.currentWeapon = GameObject.Instantiate(this.weaponPrefabs[0], this.transform);
-            this.currentWeapon.transform.position = this.transform.Find("WeaponAttach").position;
-            this.weaponScript = this.currentWeapon.GetComponent<Weapon>();
-            this.weaponScript.entity = this;
+            this.TrySwitchWeapon(0);
         }
     }
 
@@ -143,15 +140,20 @@ public abstract class Entity : MonoBehaviour {
 
     protected bool TrySwitchWeapon(int weaponIndex)
     {
-        if (!this.canSwitchWeapon || this.weaponScript.reloading || weaponIndex == this.currentWeaponIndex) return false;
+        if (!this.canSwitchWeapon || (this.weaponScript && this.weaponScript.reloading) || weaponIndex == this.currentWeaponIndex) return false;
 
-        GameObject.Destroy(this.currentWeapon);
+        if (this.currentWeapon)
+        {
+            GameObject.Destroy(this.currentWeapon);
+        }
+        
         this.canSwitchWeapon = false;
         Invoke("EnableWeaponSwitch", 0.5f);
 
         this.currentWeaponIndex = weaponIndex;
         this.currentWeapon = GameObject.Instantiate(this.weaponPrefabs[this.currentWeaponIndex], this.transform);
         this.weaponScript = this.currentWeapon.GetComponent<Weapon>();
+        this.weaponScript.entity = this;
 
         return true;
     }

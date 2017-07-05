@@ -31,6 +31,8 @@ public class Bullet : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
+        if (collision.isTrigger) return;
+
         if (this.explosion)
         {
             GameObject.Instantiate(this.explosion, transform.position, Quaternion.identity);
@@ -46,6 +48,7 @@ public class Bullet : MonoBehaviour
 
     private void OnBecameInvisible()
     {
+        Debug.Log("DELETE");
         GameObject.Destroy(this.gameObject);
     }
 }
