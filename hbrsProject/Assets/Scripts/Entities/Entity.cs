@@ -18,7 +18,7 @@ public abstract class Entity : MonoBehaviour {
     public GameObject hitEffectPrefab;
 
     [Header("Weapon")]
-    public GameObject weaponPrefab;
+    public GameObject[] weaponPrefabs;
     public Transform aimingTarget;
     public float damageMultiplier = 1;
     public float accuracyMultiplier = 1;
@@ -36,7 +36,9 @@ public abstract class Entity : MonoBehaviour {
     protected Animator animator;
     protected bool grounded = false;
     protected bool crouched = false;
-    protected GameObject weapon;
+    protected GameObject currentWeapon;
+    protected int currentWeaponIndex = 0;
+    protected bool canSwitchWeapon = true;
 
     protected void Awake()
     {
@@ -54,11 +56,11 @@ public abstract class Entity : MonoBehaviour {
             this.healthBarSlider = this.healthBar.GetComponentInChildren<Slider>();
         }
 
-        if (this.weaponPrefab)
+        if (this.weaponPrefabs.Length > 0)
         {
-            this.weapon = GameObject.Instantiate(this.weaponPrefab, this.transform);
-            this.weapon.transform.position = this.transform.Find("WeaponAttach").position;
-            this.weaponScript = this.weapon.GetComponent<Weapon>();
+            this.currentWeapon = GameObject.Instantiate(this.weaponPrefabs[0], this.transform);
+            this.currentWeapon.transform.position = this.transform.Find("WeaponAttach").position;
+            this.weaponScript = this.currentWeapon.GetComponent<Weapon>();
             this.weaponScript.entity = this;
         }
     }
@@ -137,5 +139,25 @@ public abstract class Entity : MonoBehaviour {
     {
         this.currentHealth += change;
         this.currentHealth = Mathf.Clamp(this.currentHealth, 0, this.maxHealth);
+    }
+
+    protected bool TrySwitchWeapon(int weaponIndex)
+    {
+        if (!this.canSwitchWeapon || this.weaponScript.reloading || weaponIndex == this.currentWeaponIndex) return false;
+
+        GameObject.Destroy(this.currentWeapon);
+        this.canSwitchWeapon = false;
+        Invoke("EnableWeaponSwitch", 0.5f);
+
+        this.currentWeaponIndex = weaponIndex;
+        this.currentWeapon = GameObject.Instantiate(this.weaponPrefabs[this.currentWeaponIndex], this.transform);
+        this.weaponScript = this.currentWeapon.GetComponent<Weapon>();
+
+        return true;
+    }
+
+    private void EnableWeaponSwitch()
+    {
+        this.canSwitchWeapon = true;
     }
 }

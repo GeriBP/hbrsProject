@@ -8,15 +8,25 @@ public class Bullet : MonoBehaviour
     float bulletSpeed, bulletDamage;
     [SerializeField]
     GameObject explosion;
-    private Rigidbody2D myRb;
+    private new Rigidbody2D rigidbody;
+
+    private void Awake()
+    {
+        this.rigidbody = this.GetComponent<Rigidbody2D>();
+    }
+
+    private void Update()
+    {
+        Vector2 direction = this.rigidbody.velocity;
+        this.transform.rotation = Quaternion.AngleAxis(Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg, Vector3.forward);
+    }
 
     public void BulletShoot(Vector2 dir, float accuracy, float dmgMult)
     {
         bulletDamage = bulletDamage * dmgMult;
-        myRb = GetComponent<Rigidbody2D>();
 
         // FIX ACURRACY
-        myRb.AddForce(new Vector2(Random.Range(dir.x - accuracy, dir.x + accuracy), Random.Range(dir.y - accuracy, dir.y + accuracy)) * bulletSpeed, ForceMode2D.Impulse);
+        this.rigidbody.AddForce(new Vector2(Random.Range(dir.x - accuracy, dir.x + accuracy), Random.Range(dir.y - accuracy, dir.y + accuracy)) * bulletSpeed, ForceMode2D.Impulse);
     }
 
     void OnTriggerEnter2D(Collider2D collision)

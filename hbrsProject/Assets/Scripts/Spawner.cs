@@ -13,6 +13,6 @@ public class Spawner : MonoBehaviour {
 
     private void Spawn()
     {
-        GameObject enemy = GameObject.Instantiate(this.enemy, this.transform.position, Quaternion.LookRotation(Vector3.forward));
+        GameObject.Instantiate(this.enemy, this.transform.position, Quaternion.LookRotation(Vector3.forward));
     }
 }
