@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: d8949c3f550ae8b41a6daecbaedda298
-timeCreated: 1499094521
+timeCreated: 1499266390
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -16,6 +16,8 @@ TextureImporter:
     21300018: StuffSS_9
     21300020: StuffSS_10
     21300022: StuffSS_11
+    21300024: StuffSS_12
+    21300026: StuffSS_13
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -256,6 +258,32 @@ TextureImporter:
         y: 5
         width: 172
         height: 168
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: StuffSS_12
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 174
+        width: 79
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: StuffSS_13
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 63
+        width: 79
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
