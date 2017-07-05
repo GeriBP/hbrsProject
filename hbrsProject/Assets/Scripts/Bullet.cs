@@ -48,7 +48,6 @@ public class Bullet : MonoBehaviour
 
     private void OnBecameInvisible()
     {
-        Debug.Log("DELETE");
         GameObject.Destroy(this.gameObject);
     }
 }
