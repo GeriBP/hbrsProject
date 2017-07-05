@@ -31,8 +31,9 @@ public class Enemy : Entity
         {
             this.Move(this.movementDirection.normalized, false, this.grounded && Random.value > 0.995);
         }
-        else
+        else if (!Physics2D.Linecast(this.transform.position, this.aimingTarget.position, 1 << LayerMask.NameToLayer("Ground")))
         {
+            this.Move(Vector3.zero, false, false);
             this.weaponScript.TryFire();
         }
     }
