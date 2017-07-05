@@ -24,6 +24,9 @@ public abstract class Entity : MonoBehaviour {
     public float accuracyMultiplier = 1;
     public float reloadSpeedMultiplier = 1;
 
+    [Header("Death Particles")]
+    public GameObject DeathPs;
+
     [HideInInspector]
     public Weapon weaponScript;
 
@@ -39,6 +42,7 @@ public abstract class Entity : MonoBehaviour {
     protected GameObject currentWeapon;
     protected int currentWeaponIndex = -1;
     protected bool canSwitchWeapon = true;
+    protected bool canTakeDmg = true;
 
     protected void Awake()
     {
@@ -64,12 +68,6 @@ public abstract class Entity : MonoBehaviour {
 
     protected void FixedUpdate()
     {
-        if (this.currentHealth == 0)
-        {
-            GameObject.Destroy(this.gameObject);
-            return;
-        }
-
         Vector3 aimingTargetPosition = this.aimingTarget.position;
         if (aimingTargetPosition.x < this.transform.position.x && Mathf.Sign(this.transform.localScale.x) > 0
             || aimingTargetPosition.x > this.transform.position.x && Mathf.Sign(this.transform.localScale.x) < 0)
@@ -85,14 +83,6 @@ public abstract class Entity : MonoBehaviour {
             this.animator.SetBool("grounded", this.grounded);
             this.animator.SetFloat("verticalSpeed", this.rigidbody.velocity.y);
             this.animator.SetFloat("speed", Mathf.Abs(this.rigidbody.velocity.x));
-        }
-    }
-
-    protected void Update()
-    {
-        if (this.healthBarPrefab)
-        {
-            this.healthBarSlider.value = this.currentHealth / (float)this.maxHealth;
         }
     }
 
@@ -134,8 +124,35 @@ public abstract class Entity : MonoBehaviour {
 
     public void AdjustHealth(float change)
     {
+        if(change < 0 && canTakeDmg)
+        {
+            canTakeDmg = false;
+            Invoke("enableTakeDamage", 0.01f);
+        }
+        else if(change < 0 && !canTakeDmg)
+        {
+            change = 0.0f;
+        }
+        Debug.Log("change: "+ change + " in : " + Time.time);
         this.currentHealth += change;
         this.currentHealth = Mathf.Clamp(this.currentHealth, 0, this.maxHealth);
+
+        if (this.currentHealth == 0)
+        {
+            Instantiate(DeathPs, transform.position, Quaternion.identity);
+            GameObject.Destroy(this.gameObject);
+            return;
+        }
+
+        if (this.healthBarPrefab)
+        {
+            this.healthBarSlider.value = this.currentHealth / (float)this.maxHealth;
+        }
+    }
+
+    private void enableTakeDamage()
+    {
+        canTakeDmg = true;
     }
 
     protected bool TrySwitchWeapon(int weaponIndex)

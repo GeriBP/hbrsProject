@@ -17,7 +17,6 @@ public class Grenade : MonoBehaviour {
     {
         if (!goList.Contains(collision.gameObject))
         {
-            Debug.Log("Greande in: " + Time.time);
             goList.Add(collision.gameObject);
             Entity entity = collision.GetComponent("Entity") as Entity;
             if (entity == null) return;
