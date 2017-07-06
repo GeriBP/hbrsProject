@@ -14,8 +14,6 @@ public class Enemy : Entity
 
     new void Update()
     {
-        base.Update();
-
         bool canSeePlayer = !Physics2D.Linecast(this.transform.position, this.aimingTarget.position, 1 << LayerMask.NameToLayer("Ground"));
         if (canSeePlayer)
         {
