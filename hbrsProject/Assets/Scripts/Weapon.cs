@@ -29,27 +29,30 @@ public class Weapon : MonoBehaviour {
     {
         this.animator = this.GetComponent<Animator>();
         this.nozzleTransform = this.transform.Find("Nozzle");
-        entity = GetComponentInParent<Entity>();
+        this.entity = GetComponentInParent<Entity>();
     }
 
     protected void FixedUpdate()
     {
-        Vector3 right = (this.entity.aimingTarget.position - this.transform.position).normalized;
-        this.transform.right = right.normalized;
-
-        if (this.transform.parent.localScale.x < 0 && Mathf.Sign(this.transform.localScale.x) > 0
-            || this.transform.parent.localScale.x > 0 && Mathf.Sign(this.transform.localScale.x) < 0)
+        if (this.entity)
         {
-            Vector3 localScale = this.transform.localScale;
-            localScale.x *= -1;
-            localScale.y *= -1;
-            this.transform.localScale = localScale;
-        }
+            Vector3 right = (this.entity.aimingTarget.position - this.transform.position).normalized;
+            this.transform.right = right.normalized;
 
-        //Bug fix
-        if (transform.localEulerAngles.y != 0.0f)
-        {
-            transform.localEulerAngles = new Vector3(0.0f, 0.0f, -179.9f);
+            if (this.transform.parent.localScale.x < 0 && Mathf.Sign(this.transform.localScale.x) > 0
+                || this.transform.parent.localScale.x > 0 && Mathf.Sign(this.transform.localScale.x) < 0)
+            {
+                Vector3 localScale = this.transform.localScale;
+                localScale.x *= -1;
+                localScale.y *= -1;
+                this.transform.localScale = localScale;
+            }
+
+            //Bug fix
+            if (transform.localEulerAngles.y != 0.0f)
+            {
+                transform.localEulerAngles = new Vector3(0.0f, 0.0f, -179.9f);
+            }
         }
     }
 

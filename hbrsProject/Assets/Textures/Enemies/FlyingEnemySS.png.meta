@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 04081602add59fb42875c2620009e9fd
-timeCreated: 1498318662
+timeCreated: 1499531080
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -102,12 +102,12 @@ TextureImporter:
       name: FlyingEnemySS_0
       rect:
         serializedVersion: 2
-        x: 10
-        y: 362
-        width: 289
-        height: 142
+        x: 99
+        y: 386
+        width: 111
+        height: 111
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -115,12 +115,12 @@ TextureImporter:
       name: FlyingEnemySS_1
       rect:
         serializedVersion: 2
-        x: 19
-        y: 212
-        width: 271
-        height: 139
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 248
+        y: 441
+        width: 50
+        height: 63
+      alignment: 9
+      pivot: {x: 0.043014526, y: 0.84408814}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -128,12 +128,12 @@ TextureImporter:
       name: FlyingEnemySS_2
       rect:
         serializedVersion: 2
-        x: 379
-        y: 281
+        x: 311
+        y: 460
         width: 35
         height: 35
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -141,25 +141,12 @@ TextureImporter:
       name: FlyingEnemySS_3
       rect:
         serializedVersion: 2
-        x: 10
-        y: 61
-        width: 238
-        height: 138
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: FlyingEnemySS_4
-      rect:
-        serializedVersion: 2
-        x: 282
-        y: 49
-        width: 195
-        height: 136
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 347
+        y: 434
+        width: 101
+        height: 36
+      alignment: 9
+      pivot: {x: 0.047539134, y: 0.09313965}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
