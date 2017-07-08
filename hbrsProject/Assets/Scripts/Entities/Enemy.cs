@@ -12,9 +12,9 @@ public class Enemy : Entity
         this.aimingTarget = GameObject.Find("Player").transform;
     }
 
-    new void Update()
+    void Update()
     {
-        bool canSeePlayer = !Physics2D.Linecast(this.transform.position, this.aimingTarget.position, 1 << LayerMask.NameToLayer("Ground"));
+        bool canSeePlayer = this.aimingTarget && !Physics2D.Linecast(this.transform.position, this.aimingTarget.position, 1 << LayerMask.NameToLayer("Ground"));
         if (canSeePlayer)
         {
             this.movementDirection = this.aimingTarget.position - this.transform.position;

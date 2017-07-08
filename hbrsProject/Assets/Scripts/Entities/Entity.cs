@@ -135,8 +135,8 @@ public abstract class Entity : MonoBehaviour {
     {
         if(change < 0 && canTakeDmg)
         {
-            canTakeDmg = false;
-            Invoke("enableTakeDamage", 0.01f);
+            this.canTakeDmg = false;
+            Invoke("EnableTakeDamage", 0.01f);
         }
         else if(change < 0 && !canTakeDmg)
         {
@@ -159,7 +159,7 @@ public abstract class Entity : MonoBehaviour {
         }
     }
 
-    private void enableTakeDamage()
+    private void EnableTakeDamage()
     {
         canTakeDmg = true;
     }

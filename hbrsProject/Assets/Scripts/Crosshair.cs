@@ -15,7 +15,7 @@ public class Crosshair : MonoBehaviour
 
     void LateUpdate()
     {
-        if (!MenuHandler.isPaused)
+        if (!MenuHandler.isPaused && this.playerTransform)
         {
             Vector3 newPosition = this.transform.position + new Vector3(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"), 0);
 

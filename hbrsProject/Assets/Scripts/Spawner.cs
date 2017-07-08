@@ -4,15 +4,20 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour {
     public GameObject enemy;
-    public float spawnTime;
+    public float respawnTime;
 
-    private void Start()
+    private GameObject currentEnemy;
+
+    private void FixedUpdate()
     {
-        InvokeRepeating("Spawn", 0, this.spawnTime);
+        if (!this.currentEnemy && !IsInvoking("Spawn"))
+        {
+            Invoke("Spawn", this.respawnTime);
+        }
     }
 
     private void Spawn()
     {
-        GameObject.Instantiate(this.enemy, this.transform.position, Quaternion.LookRotation(Vector3.forward));
+        this.currentEnemy = GameObject.Instantiate(this.enemy, this.transform.position, Quaternion.LookRotation(Vector3.forward));
     }
 }
