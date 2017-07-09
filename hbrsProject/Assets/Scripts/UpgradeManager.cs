@@ -56,8 +56,7 @@ public class UpgradeManager : MonoBehaviour {
     [Header("Money Display")]
     public Text moneyDisp;
     
-    [Header("Don't touch")]
-    public static int money = 0;
+    private int money = 0;
 
     private Player playerS;
     private string costStr = "Cost: \n";
@@ -81,7 +80,7 @@ public class UpgradeManager : MonoBehaviour {
     {
         if (money - hpCost >= 0 && hpLvl < 5)
         {
-            modMoney(-hpCost);
+            ModMoney(-hpCost);
             hpLvl++;
             playerS.maxHealth += hpInc;
             playerS.currentHealth = playerS.maxHealth;
@@ -100,7 +99,7 @@ public class UpgradeManager : MonoBehaviour {
     {
         if (money - msCost >= 0 && msLvl < 5)
         {
-            modMoney(-msCost);
+            ModMoney(-msCost);
             msCost = (int)Mathf.Round((float)msCost * (float)(1 + (msLvl * upradeInc)) / 10.0f) * 10;
             msLvl++;
             if (msLvl < 5) msTxtC.text = costStr + msCost.ToString();
@@ -121,7 +120,7 @@ public class UpgradeManager : MonoBehaviour {
     {
         if (money - jhCost >= 0 && jhLvl < 5)
         {
-            modMoney(-jhCost);
+            ModMoney(-jhCost);
             jhCost = (int)Mathf.Round((float)jhCost * (float)(1 + (jhLvl * upradeInc)) / 10.0f) * 10;
             jhLvl++;
             if (jhLvl < 5) jhTxtC.text = costStr + jhCost.ToString();
@@ -140,7 +139,7 @@ public class UpgradeManager : MonoBehaviour {
     {
         if (money - acCost >= 0 && acLvl < 5)
         {
-            modMoney(-acCost);
+            ModMoney(-acCost);
             acCost = (int)Mathf.Round((float)acCost * (float)(1 + (acLvl * upradeInc)) / 10.0f) * 10;
             acLvl++;
             if (acLvl < 5) acTxtC.text = costStr + acCost.ToString();
@@ -159,7 +158,7 @@ public class UpgradeManager : MonoBehaviour {
     {
         if (money - wdCost >= 0 && wdLvl < 5)
         {
-            modMoney(-wdCost);
+            ModMoney(-wdCost);
             wdCost = (int)Mathf.Round((float)wdCost * (float)(1 + (wdLvl * upradeInc)) / 10.0f) * 10;
             wdLvl++;
             if (wdLvl < 5) wdTxtC.text = costStr + wdCost.ToString();
@@ -178,7 +177,7 @@ public class UpgradeManager : MonoBehaviour {
     {
         if (money - rtCost >= 0 && rtLvl < 5)
         {
-            modMoney(-rtCost);
+            ModMoney(-rtCost);
             rtCost = (int)Mathf.Round((float)rtCost * (float)(1 + (rtLvl * upradeInc)) / 10.0f) * 10;
             rtLvl++;
             if (rtLvl < 5)rtTxtC.text = costStr + rtCost.ToString();
@@ -197,7 +196,7 @@ public class UpgradeManager : MonoBehaviour {
     {
         if (money - eCost >= 0 && eLvl < 5)
         {
-            modMoney(-eCost);
+            ModMoney(-eCost);
             eCost = (int)Mathf.Round((float)eCost * (float)(1 + (eLvl * upradeInc)) / 10.0f) * 10;
             eLvl++;
             if (eLvl < 5) eTxtC.text = costStr + eCost.ToString();
@@ -217,7 +216,7 @@ public class UpgradeManager : MonoBehaviour {
     {
         if (money - adCost >= 0 && adLvl < 5)
         {
-            modMoney(-adCost);
+            ModMoney(-adCost);
             adCost = (int)Mathf.Round((float)adCost * (float)(1 + (adLvl * upradeInc)) / 10.0f) * 10;
             adLvl++;
             if (adLvl < 5) adTxtC.text = costStr + adCost.ToString();
@@ -236,7 +235,7 @@ public class UpgradeManager : MonoBehaviour {
     {
         if (money - erCost >= 0 && erLvl < 5)
         {
-            modMoney(-erCost);
+            ModMoney(-erCost);
             erCost = (int)Mathf.Round((float)erCost * (float)(1 + (erLvl * upradeInc)) / 10.0f) * 10;
             erLvl++;
             if (erLvl < 5) erTxtC.text = costStr + erCost.ToString();
@@ -253,7 +252,7 @@ public class UpgradeManager : MonoBehaviour {
 
     // Adds 'value' to the money count (used to add and substract money)
     // Checks must be done before
-    public void modMoney(int value)
+    public void ModMoney(int value)
     {
         money += value;
         moneyDisp.text = money.ToString() + "$";
