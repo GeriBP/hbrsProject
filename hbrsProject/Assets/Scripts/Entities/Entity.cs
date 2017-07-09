@@ -24,8 +24,9 @@ public abstract class Entity : MonoBehaviour {
     public float accuracyMultiplier = 1;
     public float reloadSpeedMultiplier = 1;
 
-    [Header("Death Particles")]
-    public GameObject DeathPs;
+    [Header("Death")]
+    public GameObject deathPs;
+    public int reward;
 
     [HideInInspector]
     public Weapon weaponScript;
@@ -43,6 +44,7 @@ public abstract class Entity : MonoBehaviour {
     protected int currentWeaponIndex = -1;
     protected bool canSwitchWeapon = true;
     protected bool canTakeDmg = true;
+    protected UpgradeManager upgradeManagerScript;
 
     protected GameObject CurrentWeapon
     {
@@ -59,6 +61,7 @@ public abstract class Entity : MonoBehaviour {
         this.ceilingCheck = this.transform.Find("CeilingCheck");
         this.rigidbody = this.GetComponent<Rigidbody2D>();
         this.animator = this.GetComponent<Animator>();
+        this.upgradeManagerScript = GameObject.Find("GameMenus").GetComponent<UpgradeManager>();
     }
 
     protected void Start () {
@@ -133,22 +136,25 @@ public abstract class Entity : MonoBehaviour {
 
     public void AdjustHealth(float change)
     {
-        if(change < 0 && canTakeDmg)
+        if (change < 0 && this.canTakeDmg)
         {
             this.canTakeDmg = false;
             Invoke("EnableTakeDamage", 0.01f);
         }
-        else if(change < 0 && !canTakeDmg)
+        else if (change < 0 && !this.canTakeDmg)
         {
-            change = 0.0f;
+            return;
         }
-        Debug.Log("change: "+ change + " in : " + Time.time);
+
+        Debug.Log("change: "+ change + " from " + this.currentHealth + " in : " + Time.time);
+
         this.currentHealth += change;
         this.currentHealth = Mathf.Clamp(this.currentHealth, 0, this.maxHealth);
 
         if (this.currentHealth == 0)
         {
-            Instantiate(DeathPs, transform.position, Quaternion.identity);
+            Instantiate(this.deathPs, transform.position, Quaternion.identity);
+            this.upgradeManagerScript.ModMoney(this.reward);
             GameObject.Destroy(this.gameObject);
             return;
         }
