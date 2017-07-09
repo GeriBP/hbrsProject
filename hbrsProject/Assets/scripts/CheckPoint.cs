@@ -19,7 +19,7 @@ public class CheckPoint : MonoBehaviour {
         {
             menuScript.CheckPOpen();
             playerS = GameObject.Find("Player").GetComponent<Player>();
-            playerS.currentHealth = playerS.maxHealth;
+            playerS.AdjustHealth(playerS.maxHealth);
             playerS.currentEnergy = playerS.maxEnergy;
         }
     }
