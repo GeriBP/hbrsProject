@@ -5,6 +5,10 @@ public class Enemy : Entity
 {
     [Header("Reward")]
     public int reward;
+    [Header("Probabilities")]
+    public float ammoRifleProb;
+    [Header("AmmoCrates")]
+    public GameObject RifleCrate;
 
     private Vector3 movementDirection = Vector3.left;
 
@@ -48,6 +52,15 @@ public class Enemy : Entity
     public override void OnDeath()
     {
         this.upgradeManagerScript.ModMoney(this.reward);
+        CheckProbabilities();
         GameObject.Destroy(this.gameObject);
+    }
+
+    private void CheckProbabilities()
+    {
+        if (UnityEngine.Random.Range(0.0f, 1.0f) <= ammoRifleProb)
+        {
+            Instantiate(RifleCrate, transform.position, Quaternion.identity);
+        }
     }
 }
