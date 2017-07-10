@@ -52,5 +52,20 @@
     private void UpdateUI()
     {
         this.ammoDisplay.text = this.weaponScript.reloading ? "RELOADING" : this.weaponScript.currentMagazineBullets + "/" + this.weaponScript.maxMagazineBullets;
+        if (this.weaponScript.reloading)
+        {
+            this.ammoDisplay.text = "RELOADING";
+        }
+        else
+        {
+            if (this.weaponScript.hasInfAmmo)
+            {
+                this.ammoDisplay.text  = this.weaponScript.currentMagazineBullets + "/INF";
+            }
+            else
+            {
+                this.ammoDisplay.text = this.weaponScript.currentMagazineBullets + "/" + this.weaponScript.totalBullets;
+            }
+        }
     }
 }

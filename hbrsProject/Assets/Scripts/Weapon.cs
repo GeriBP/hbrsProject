@@ -19,6 +19,8 @@ public class Weapon : MonoBehaviour {
     public float shakeDuration;
     public int maxMagazineBullets;
     public int currentMagazineBullets;
+    public int totalBullets;
+    public bool hasInfAmmo;
 
     protected Animator animator;
     protected Transform nozzleTransform;
@@ -58,7 +60,14 @@ public class Weapon : MonoBehaviour {
 
     public bool TryFire()
     {
-        if (!this.canFire || this.currentMagazineBullets == 0 || MenuHandler.isPaused) return false;
+        if (!this.canFire || MenuHandler.isPaused) return false;
+
+
+        if (this.currentMagazineBullets == 0)
+        {
+            this.TryReload();
+            return false;
+        }
 
         Invoke("ResetFire", this.cooldown);
         this.canFire = false;
@@ -72,17 +81,12 @@ public class Weapon : MonoBehaviour {
         Vector3 bulletOrigin = this.nozzleTransform ? this.nozzleTransform.position : this.transform.position;
         Vector3 direction = (this.entity.aimingTarget.position - bulletOrigin).normalized;
         GameObject bullet = GameObject.Instantiate(this.bullet, bulletOrigin, Quaternion.AngleAxis(Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg, Vector3.forward));
-        bullet.GetComponent<Bullet>().BulletShoot(direction, this.accuracy * this.entity.accuracyMultiplier, this.entity.damageMultiplier);
+        bullet.GetComponent<Bullet>().BulletShoot(direction, normalDistRandom()*this.accuracy * this.entity.accuracyMultiplier, this.entity.damageMultiplier);
 
         if (this.nozzleFlash)
         {
             GameObject nozzleFlash = GameObject.Instantiate(this.nozzleFlash, bulletOrigin, Quaternion.AngleAxis(Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg, Vector3.forward));
             nozzleFlash.transform.SetParent(nozzleTransform);
-        }
-
-        if (this.currentMagazineBullets == 0)
-        {
-            this.TryReload();
         }
 
         return true;
@@ -96,6 +100,11 @@ public class Weapon : MonoBehaviour {
     public void TryReload()
     {
         if (this.reloading) return;
+        if(totalBullets == 0 && !hasInfAmmo)
+        {
+            //Make sound?
+            return;
+        }
         this.reloading = true;
         Invoke("Reload", this.reloadTime * this.entity.reloadSpeedMultiplier);
     }
@@ -103,6 +112,35 @@ public class Weapon : MonoBehaviour {
     private void Reload()
     {
         this.reloading = false;
-        this.currentMagazineBullets = this.maxMagazineBullets;
+        if (hasInfAmmo)
+        {
+            this.currentMagazineBullets = this.maxMagazineBullets;
+            return;
+        }
+        if (totalBullets >= maxMagazineBullets) {
+            this.currentMagazineBullets = this.maxMagazineBullets;
+            totalBullets -= maxMagazineBullets;
+        }
+        else
+        {
+            this.currentMagazineBullets = this.totalBullets;
+            totalBullets = 0;
+        }
+    }
+
+    private float normalDistRandom()
+    {
+        float u, v, S;
+
+        do
+        {
+            u = 2.0f * Random.value - 1.0f;
+            v = 2.0f * Random.value - 1.0f;
+            S = u * u + v * v;
+        }
+        while (S >= 1.0);
+
+        float fac = Mathf.Sqrt(-2.0f * Mathf.Log(S) / S);
+        return u * fac;
     }
 }
