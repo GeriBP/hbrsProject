@@ -81,7 +81,7 @@ public class Weapon : MonoBehaviour {
         Vector3 bulletOrigin = this.nozzleTransform ? this.nozzleTransform.position : this.transform.position;
         Vector3 direction = (this.entity.aimingTarget.position - bulletOrigin).normalized;
         GameObject bullet = GameObject.Instantiate(this.bullet, bulletOrigin, Quaternion.AngleAxis(Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg, Vector3.forward));
-        bullet.GetComponent<Bullet>().BulletShoot(direction, normalDistRandom()*this.accuracy * this.entity.accuracyMultiplier, this.entity.damageMultiplier);
+        bullet.GetComponent<Bullet>().BulletShoot(direction, normalDistRandom() * this.accuracy * this.entity.accuracyMultiplier, this.entity.damageMultiplier, this.range);
 
         if (this.nozzleFlash)
         {

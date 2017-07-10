@@ -20,7 +20,7 @@ public class UnderslungGrenade : Ability
     {
         Vector3 direction = (this.player.aimingTarget.position - this.nozzleTransform.position).normalized;
         GameObject bullet = GameObject.Instantiate(this.grenade, this.nozzleTransform.position, Quaternion.AngleAxis(Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg, Vector3.forward));
-        bullet.GetComponent<Bullet>().BulletShoot(direction, 0, 1);
+        bullet.GetComponent<Bullet>().BulletShoot(direction, 0, 1, float.MaxValue);
 
         this.ResetFire();
     }
