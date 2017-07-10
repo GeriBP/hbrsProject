@@ -12,15 +12,25 @@ public class MessagesMenu : MonoBehaviour {
     [SerializeField]
     Animator doorsAnim;
     [SerializeField]
-    GameObject screen;
+    GameObject screen, intro;
     private int currMessage = 0;
     private bool canPress = false;
+    public static bool isFirst = true;
     // Use this for initialization
     void Start () {
+        if (!isFirst)
+        {
+            Destroy(intro);
+            canPress = true;
+            Cursor.visible = true;
+        }
+        else
+        {
+            Invoke("enablePress", 5.0f);
+            Cursor.visible = false;
+            Invoke("enableCursor", 5.0f);
+        }
         DisplayText.text = messages[currMessage];
-        Invoke("enablePress", 5.0f);
-        Cursor.visible = false;
-        Invoke("enableCursor", 5.0f);
     }
 	
 	// Update is called once per frame

@@ -99,6 +99,8 @@ public class MenuHandler : MonoBehaviour {
 
     public void loadMenu()
     {
+        Time.timeScale = 1.0f;
+        MessagesMenu.isFirst = false;
         SceneManager.LoadScene("Menu2", LoadSceneMode.Single);
     }
 }
