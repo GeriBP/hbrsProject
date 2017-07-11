@@ -26,6 +26,7 @@ public abstract class Entity : MonoBehaviour {
 
     [Header("Death")]
     public GameObject deathPs;
+    public int reward;
 
     [HideInInspector]
     public Weapon weaponScript;
@@ -152,7 +153,7 @@ public abstract class Entity : MonoBehaviour {
 
         if (this.currentHealth == 0)
         {
-            Instantiate(this.deathPs, transform.position, Quaternion.identity);
+            this.upgradeManagerScript.ModMoney(this.reward);
             this.OnDeath();
             return;
         }

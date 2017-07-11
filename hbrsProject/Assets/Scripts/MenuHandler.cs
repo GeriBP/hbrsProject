@@ -4,13 +4,19 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class MenuHandler : MonoBehaviour {
-    [SerializeField]
-    GameObject pauseMenu, upgradeMenu, checkPMenu;
+    public GameObject pauseMenu, upgradeMenu, checkPMenu;
+
+    public static bool IsMenuOpen  
+    {
+        get
+        {
+            return MenuHandler.currentMenu != null;
+        }
+    }
 
     private Animator upgradeAnim;
+    private static GameObject currentMenu;
 
-    public static bool isPaused = false;
-    public static bool upgrade = false;
     // Use this for initialization
     void Start () {
         upgradeAnim = upgradeMenu.GetComponent<Animator>();
@@ -19,77 +25,49 @@ public class MenuHandler : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         //PAUSE
-        if (Input.GetKeyDown(KeyCode.Escape) && !isPaused)
+        if (Input.GetKeyDown(KeyCode.Escape) && !MenuHandler.currentMenu)
         {
-            pauseMenu.SetActive(true);
-            isPaused = true;
-            Cursor.visible = true;
-            Time.timeScale = 0.0f;
+            this.OpenMenu(this.pauseMenu);
         }
-        else if (Input.GetKeyDown(KeyCode.Escape) && isPaused)
+        else if (Input.GetKeyDown(KeyCode.Escape) && MenuHandler.currentMenu)
         {
-            pauseMenu.SetActive(false);
-            isPaused = false;
-            Cursor.visible = false;
-            Time.timeScale = 1.0f;
-        }
-
-        //Temp
-        if (Input.GetKeyDown(KeyCode.P) && !isPaused && !upgrade)
-        {
-            UpgradeOpen();
-        }
-        else if (Input.GetKeyDown(KeyCode.P) && isPaused && upgrade)
-        {
-            UpgradeClose();
+            this.CloseMenu();
         }
     }
 
-    private void freezeTime()
+    public void OpenMenu(GameObject menu)
     {
-        Time.timeScale = 0.0f;
+        Time.timeScale = 0;
+        Cursor.visible = true;
+        menu.SetActive(true);
+        MenuHandler.currentMenu = menu;
+    }
+
+    public void CloseMenu()
+    {
+        MenuHandler.currentMenu.SetActive(false);
+        Cursor.visible = false;
+        Time.timeScale = 1;
+        MenuHandler.currentMenu = null;
     }
 
     public void unPause()
     {
         pauseMenu.SetActive(false);
-        isPaused = false;
         Cursor.visible = false;
         Time.timeScale = 1.0f;
     }
 
     public void UpgradeOpen()
     {
-        Time.timeScale = 1.0f;
-        Invoke("freezeTime", 1.0f);
         upgradeAnim.SetTrigger("down");
-        upgrade = true;
-        checkPMenu.SetActive(false);
+        this.OpenMenu(this.upgradeMenu);
     }
 
     public void UpgradeClose()
     {
-        Time.timeScale = 1.0f;
         upgradeAnim.SetTrigger("up");
-        upgrade = false;
-        Cursor.visible = false;
-        isPaused = false;
-    }
-
-    public void CheckPOpen()
-    {
-        freezeTime();
-        checkPMenu.SetActive(true);
-        Cursor.visible = true;
-        isPaused = true;
-    }
-
-    public void CheckPClose()
-    {
-        checkPMenu.SetActive(false);
-        Cursor.visible = false;
-        isPaused = false;
-        Time.timeScale = 1.0f;
+        this.CloseMenu();
     }
 
     public void Quit()

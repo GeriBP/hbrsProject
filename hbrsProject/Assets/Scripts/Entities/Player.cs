@@ -54,7 +54,7 @@ using System.Collections;using System.Collections.Generic;using System.Linq;u
 
         // Condition to prevent player from walking during menus
         //(when time is not freezed when the upgrade menu is coming down)
-        if (!MenuHandler.isPaused) this.Move(Vector3.right * Input.GetAxis("Horizontal"), Input.GetKey(KeyCode.S), this.shouldJump);
+        if (!MenuHandler.IsMenuOpen) this.Move(Vector3.right * Input.GetAxis("Horizontal"), Input.GetKey(KeyCode.S), this.shouldJump);
         this.shouldJump = false;
     }
     private void UpdateUI()
@@ -79,6 +79,14 @@ using System.Collections;using System.Collections.Generic;using System.Linq;u
 
     public override void OnDeath()
     {
+        Instantiate(this.deathPs, transform.position, Quaternion.identity);
+        this.gameObject.SetActive(false);
+        Invoke("Respawn", 1);
+    }
+
+    private void Respawn()
+    {
+        this.gameObject.SetActive(true);
         this.AdjustHealth(this.maxHealth);
         this.currentEnergy = this.maxEnergy;
         this.transform.position = this.lastCheckpoint;
