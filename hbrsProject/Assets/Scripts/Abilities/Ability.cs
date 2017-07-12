@@ -47,7 +47,7 @@ public abstract class Ability : MonoBehaviour {
 
     public bool CanFire()
     {
-        return !MenuHandler.isPaused && this.canFire && this.player.currentEnergy >= this.energyCosts && this.FireCondition();
+        return !MenuHandler.IsMenuOpen && this.canFire && this.player.currentEnergy >= this.energyCosts && this.FireCondition();
     }
     protected abstract bool FireCondition();
 }

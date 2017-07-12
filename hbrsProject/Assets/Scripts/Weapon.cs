@@ -60,7 +60,7 @@ public class Weapon : MonoBehaviour {
 
     public bool TryFire()
     {
-        if (!this.canFire || MenuHandler.isPaused) return false;
+        if (!this.canFire || MenuHandler.IsMenuOpen) return false;
 
 
         if (this.currentMagazineBullets == 0)

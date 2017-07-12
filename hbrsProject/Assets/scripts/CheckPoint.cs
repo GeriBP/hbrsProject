@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Linq;
 using UnityEngine;
 
 public class CheckPoint : MonoBehaviour {
@@ -17,11 +16,12 @@ public class CheckPoint : MonoBehaviour {
     {
         if (canEnter && Input.GetKeyDown(KeyCode.E))
         {
-            menuScript.CheckPOpen();
+            menuScript.OpenMenu(menuScript.checkPMenu);
             playerS = GameObject.Find("Player").GetComponent<Player>();
             playerS.AdjustHealth(playerS.maxHealth);
             playerS.currentEnergy = playerS.maxEnergy;
-            playerS.lastCheckpoint = new Vector3(this.transform.position.x, this.transform.position.y, this.transform.position.z);
+            playerS.lastCheckpoint = new Vector3(this.transform.position.x, this.transform.position.y + 1, this.transform.position.z);
+            System.Array.ForEach(GameObject.Find("Level").GetComponentsInChildren<Spawner>(), spawner => spawner.Spawn());
         }
     }
 

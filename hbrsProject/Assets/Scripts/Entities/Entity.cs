@@ -18,7 +18,7 @@ public abstract class Entity : MonoBehaviour {
     public GameObject hitEffectPrefab;
 
     [Header("Weapon")]
-    public GameObject[] weaponPrefabs;
+    public List<GameObject> weaponPrefabs;
     public Transform aimingTarget;
     public float damageMultiplier = 1;
     public float accuracyMultiplier = 1;
@@ -26,6 +26,7 @@ public abstract class Entity : MonoBehaviour {
 
     [Header("Death")]
     public GameObject deathPs;
+    public int reward;
 
     [HideInInspector]
     public Weapon weaponScript;
@@ -60,7 +61,7 @@ public abstract class Entity : MonoBehaviour {
         this.ceilingCheck = this.transform.Find("CeilingCheck");
         this.rigidbody = this.GetComponent<Rigidbody2D>();
         this.animator = this.GetComponent<Animator>();
-        this.upgradeManagerScript = GameObject.Find("GameMenus").GetComponent<UpgradeManager>();
+        this.upgradeManagerScript = GameObject.Find("GameMenus") ? GameObject.Find("GameMenus").GetComponent<UpgradeManager>() : null;
     }
 
     protected void Start () {
@@ -71,7 +72,7 @@ public abstract class Entity : MonoBehaviour {
             this.healthBarSlider = this.healthBar.GetComponentInChildren<Slider>();
         }
 
-        if (this.weaponPrefabs.Length > 0)
+        if (this.weaponPrefabs.Count > 0)
         {
             this.TrySwitchWeapon(0);
         }
@@ -152,7 +153,7 @@ public abstract class Entity : MonoBehaviour {
 
         if (this.currentHealth == 0)
         {
-            Instantiate(this.deathPs, transform.position, Quaternion.identity);
+            this.upgradeManagerScript.ModMoney(this.reward);
             this.OnDeath();
             return;
         }
