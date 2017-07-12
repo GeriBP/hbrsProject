@@ -15,7 +15,7 @@ using System.Collections;using System.Collections.Generic;using System.Linq;u
             //AM.PlaySound(AudioManager.SFX.Jump);
         }        if (Input.GetKey(KeyCode.Mouse0) && this.abilityScript.canFire && this.weaponScript.TryFire())        {            this.cameraShake.Shake(this.weaponScript.shakeIntensity, this.weaponScript.shakeDuration);        }        if (Input.GetKeyDown(KeyCode.Mouse1) && this.abilityScript.TryFire())        {            this.cameraShake.Shake(this.weaponScript.shakeIntensity, this.weaponScript.shakeDuration);        }        if (Input.GetKeyDown(KeyCode.R))        {            this.weaponScript.TryReload();        }
 
-        if ((Input.GetAxis("Mouse ScrollWheel") != 0 && this.TrySwitchWeapon((this.currentWeaponIndex + (int)Mathf.Sign(Input.GetAxis("Mouse ScrollWheel")) + this.weaponPrefabs.Length) % this.weaponPrefabs.Length))
+        if ((Input.GetAxis("Mouse ScrollWheel") != 0 && this.TrySwitchWeapon((this.currentWeaponIndex + (int)Mathf.Sign(Input.GetAxis("Mouse ScrollWheel")) + this.weaponPrefabs.Count) % this.weaponPrefabs.Count))
             || (Input.GetKeyDown(KeyCode.Alpha1) && this.TrySwitchWeapon(0))
             || (Input.GetKeyDown(KeyCode.Alpha2) && this.TrySwitchWeapon(1)))
         {

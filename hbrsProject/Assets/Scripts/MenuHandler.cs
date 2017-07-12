@@ -14,13 +14,7 @@ public class MenuHandler : MonoBehaviour {
         }
     }
 
-    private Animator upgradeAnim;
     private static GameObject currentMenu;
-
-    // Use this for initialization
-    void Start () {
-        upgradeAnim = upgradeMenu.GetComponent<Animator>();
-    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -37,37 +31,36 @@ public class MenuHandler : MonoBehaviour {
 
     public void OpenMenu(GameObject menu)
     {
-        Time.timeScale = 0;
+        if (MenuHandler.currentMenu)
+            this.CloseMenu();
+
+        Time.timeScale = 1;
+        float timeTillFreeze = 0;
         Cursor.visible = true;
         menu.SetActive(true);
         MenuHandler.currentMenu = menu;
+
+        Animator animator = menu.GetComponent<Animator>();
+        if (animator)
+        {
+            animator.SetTrigger("down");
+            timeTillFreeze = 1;
+        }
+
+        Invoke("FreezeTime", timeTillFreeze);
     }
 
     public void CloseMenu()
     {
+        Animator animator = MenuHandler.currentMenu.GetComponent<Animator>();
+        if (animator)
+        {
+            animator.SetTrigger("up");
+        }
         MenuHandler.currentMenu.SetActive(false);
         Cursor.visible = false;
         Time.timeScale = 1;
         MenuHandler.currentMenu = null;
-    }
-
-    public void unPause()
-    {
-        pauseMenu.SetActive(false);
-        Cursor.visible = false;
-        Time.timeScale = 1.0f;
-    }
-
-    public void UpgradeOpen()
-    {
-        upgradeAnim.SetTrigger("down");
-        this.OpenMenu(this.upgradeMenu);
-    }
-
-    public void UpgradeClose()
-    {
-        upgradeAnim.SetTrigger("up");
-        this.CloseMenu();
     }
 
     public void Quit()
@@ -75,10 +68,8 @@ public class MenuHandler : MonoBehaviour {
         Application.Quit();
     }
 
-    public void loadMenu()
+    private void FreezeTime()
     {
-        Time.timeScale = 1.0f;
-        MessagesMenu.isFirst = false;
-        SceneManager.LoadScene("Menu2", LoadSceneMode.Single);
+        Time.timeScale = 0;
     }
 }

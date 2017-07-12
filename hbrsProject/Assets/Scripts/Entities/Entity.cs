@@ -18,7 +18,7 @@ public abstract class Entity : MonoBehaviour {
     public GameObject hitEffectPrefab;
 
     [Header("Weapon")]
-    public GameObject[] weaponPrefabs;
+    public List<GameObject> weaponPrefabs;
     public Transform aimingTarget;
     public float damageMultiplier = 1;
     public float accuracyMultiplier = 1;
@@ -72,7 +72,7 @@ public abstract class Entity : MonoBehaviour {
             this.healthBarSlider = this.healthBar.GetComponentInChildren<Slider>();
         }
 
-        if (this.weaponPrefabs.Length > 0)
+        if (this.weaponPrefabs.Count > 0)
         {
             this.TrySwitchWeapon(0);
         }
