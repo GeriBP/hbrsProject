@@ -86,6 +86,7 @@ using System.Collections;using System.Collections.Generic;using System.Linq;u
     {
         Instantiate(this.deathPs, transform.position, Quaternion.identity);
         this.gameObject.SetActive(false);
+        //System.Array.ForEach(GameObject.Find("Level").GetComponentsInChildren<Spawner>(), spawner => spawner.Spawn());
         Invoke("Respawn", 1);
     }
 
