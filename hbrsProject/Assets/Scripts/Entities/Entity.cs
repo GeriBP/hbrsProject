@@ -61,7 +61,7 @@ public abstract class Entity : MonoBehaviour {
         this.ceilingCheck = this.transform.Find("CeilingCheck");
         this.rigidbody = this.GetComponent<Rigidbody2D>();
         this.animator = this.GetComponent<Animator>();
-        this.upgradeManagerScript = GameObject.Find("GameMenus").GetComponent<UpgradeManager>();
+        this.upgradeManagerScript = GameObject.Find("GameMenus") ? GameObject.Find("GameMenus").GetComponent<UpgradeManager>() : null;
     }
 
     protected void Start () {
