@@ -154,6 +154,7 @@ public abstract class Entity : MonoBehaviour {
         if (this.currentHealth == 0)
         {
             this.upgradeManagerScript.ModMoney(this.reward);
+            Instantiate(this.deathPs, this.transform.position, Quaternion.identity);
             this.OnDeath();
             return;
         }

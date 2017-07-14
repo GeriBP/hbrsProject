@@ -84,9 +84,8 @@ using System.Collections;using System.Collections.Generic;using System.Linq;u
 
     public override void OnDeath()
     {
-        Instantiate(this.deathPs, transform.position, Quaternion.identity);
+        this.upgradeManagerScript.ModMoney(0); //TODO set current money to 0
         this.gameObject.SetActive(false);
-        //System.Array.ForEach(GameObject.Find("Level").GetComponentsInChildren<Spawner>(), spawner => spawner.Spawn());
         Invoke("Respawn", 1);
     }
 
@@ -96,6 +95,7 @@ using System.Collections;using System.Collections.Generic;using System.Linq;u
         this.AdjustHealth(this.maxHealth);
         this.currentEnergy = this.maxEnergy;
         this.transform.position = this.lastCheckpoint;
+        System.Array.ForEach(GameObject.Find("Level").GetComponentsInChildren<Spawner>(), spawner => spawner.Spawn());
     }
 
     void OnTriggerEnter2D(Collider2D other)
