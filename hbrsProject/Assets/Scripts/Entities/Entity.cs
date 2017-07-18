@@ -89,7 +89,7 @@ public abstract class Entity : MonoBehaviour {
             this.transform.localScale = localScale;
         }
 
-        this.grounded = this.rigidbody.gravityScale > 0 && Physics2D.Linecast(this.groundCheck.position, this.groundCheck.position + Vector3.down * 0.01f, 1 << LayerMask.NameToLayer("Ground"));
+        this.grounded = this.rigidbody.gravityScale > 0 && Physics2D.Linecast(this.groundCheck.position, this.groundCheck.position + Vector3.down * 0.01f, (1 << LayerMask.NameToLayer("Ground")) | (1 << LayerMask.NameToLayer("CheckP")));
         if (this.animator)
         {
             this.animator.SetBool("grounded", this.grounded);
@@ -174,7 +174,7 @@ public abstract class Entity : MonoBehaviour {
 
     public bool TrySwitchWeapon(int weaponIndex)
     {
-        if (!this.canSwitchWeapon || (this.weaponScript && this.weaponScript.reloading) || weaponIndex == this.currentWeaponIndex) return false;
+        if (!this.canSwitchWeapon || (this.weaponScript && this.weaponScript.reloading) || weaponIndex == this.currentWeaponIndex || this.weaponPrefabs.Count <= weaponIndex) return false;
 
         if (this.CurrentWeapon)
         {
@@ -198,7 +198,10 @@ public abstract class Entity : MonoBehaviour {
         this.weaponScript = this.CurrentWeapon.GetComponent<Weapon>();
         this.weaponScript.entity = this;
 
-        GameObject.Find("Player").GetComponent<Player>().updateAbility();
+        if (this is Player)
+        {
+            ((Player)this).updateAbility();
+        }
 
         return true;
     }
