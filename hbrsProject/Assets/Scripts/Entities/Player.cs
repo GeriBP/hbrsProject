@@ -85,6 +85,7 @@ using System.Collections;using System.Collections.Generic;using System.Linq;u
     public override void OnDeath()
     {
         this.upgradeManagerScript.resetMoney();
+        this.animator.Play("IdlePlayer");
         this.gameObject.SetActive(false);
         Invoke("Respawn", 1);
     }
@@ -94,7 +95,7 @@ using System.Collections;using System.Collections.Generic;using System.Linq;u
         this.gameObject.SetActive(true);
         this.AdjustHealth(this.maxHealth);
         this.currentEnergy = this.maxEnergy;
-        this.transform.position = this.lastCheckpoint;
+        this.transform.position = new Vector3(this.lastCheckpoint.x, this.lastCheckpoint.y + (this.transform.position.y - this.transform.Find("GroundCheck").position.y) + 1, this.lastCheckpoint.z);
         System.Array.ForEach(GameObject.Find("Level").GetComponentsInChildren<Spawner>(), spawner => spawner.Spawn());
     }
 

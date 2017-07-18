@@ -20,7 +20,7 @@ public class CheckPoint : MonoBehaviour {
             playerS = GameObject.Find("Player").GetComponent<Player>();
             playerS.AdjustHealth(playerS.maxHealth);
             playerS.currentEnergy = playerS.maxEnergy;
-            playerS.lastCheckpoint = new Vector3(this.transform.position.x, this.transform.position.y + 1, this.transform.position.z);
+            playerS.lastCheckpoint = new Vector3(this.transform.position.x, this.transform.position.y, this.transform.position.z);
             System.Array.ForEach(GameObject.Find("Level").GetComponentsInChildren<Spawner>(), spawner => spawner.Spawn());
         }
     }
