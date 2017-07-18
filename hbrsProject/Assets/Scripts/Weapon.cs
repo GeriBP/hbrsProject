@@ -60,6 +60,7 @@ public class Weapon : MonoBehaviour {
 
     public bool TryFire()
     {
+        if (this.reloading) return false;
         if (!this.canFire || MenuHandler.IsMenuOpen) return false;
 
 
@@ -100,7 +101,8 @@ public class Weapon : MonoBehaviour {
     public void TryReload()
     {
         if (this.reloading) return;
-        if(totalBullets == 0 && !hasInfAmmo)
+        if(maxMagazineBullets == this.currentMagazineBullets) return;
+        if (totalBullets == 0 && !hasInfAmmo)
         {
             //Make sound?
             return;
@@ -118,8 +120,8 @@ public class Weapon : MonoBehaviour {
             return;
         }
         if (totalBullets >= maxMagazineBullets) {
+            totalBullets -= (maxMagazineBullets - this.currentMagazineBullets);
             this.currentMagazineBullets = this.maxMagazineBullets;
-            totalBullets -= maxMagazineBullets;
         }
         else
         {

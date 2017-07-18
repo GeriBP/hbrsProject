@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class WeaponPickup : MonoBehaviour {
     public GameObject weaponPrefab;
+    public int weaponIndex;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -11,6 +12,8 @@ public class WeaponPickup : MonoBehaviour {
 
         Player player = collision.gameObject.GetComponent<Player>();
         player.weaponPrefabs.Add(this.weaponPrefab);
+        if (weaponIndex == 1) Player.rifleFound = true;
+        player.TrySwitchWeapon(weaponIndex);
         GameObject.Destroy(this.gameObject);
     }
 }

@@ -67,7 +67,7 @@ public class MessagesMenu : MonoBehaviour {
 
     void loadLevel()
     {
-        SceneManager.LoadScene("TutorialStage", LoadSceneMode.Single);
+        SceneManager.LoadScene("GameplayLevel", LoadSceneMode.Single);
     }
 
     public void Quit()

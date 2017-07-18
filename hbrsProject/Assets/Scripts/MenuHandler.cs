@@ -72,4 +72,15 @@ public class MenuHandler : MonoBehaviour {
     {
         Time.timeScale = 0;
     }
+
+    public void loadMenu()
+    {
+        MessagesMenu.isFirst = false;
+        SceneManager.LoadScene("Menu2", LoadSceneMode.Single);
+    }
+
+    public static void loadEnd()
+    {
+        SceneManager.LoadScene("EndScene", LoadSceneMode.Single);
+    }
 }

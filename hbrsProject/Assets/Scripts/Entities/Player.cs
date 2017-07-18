@@ -4,7 +4,7 @@ using System.Collections;using System.Collections.Generic;using System.Linq;u
     public GameObject rifleAmmoPs;
     [HideInInspector]
     public Vector3 lastCheckpoint;
-    private bool shouldJump = false;    private Text ammoDisplay;    private CameraShake cameraShake;    private GameObject energyBar;    private Slider energyBarSlider;    private Image energyBarFill;    private Ability abilityScript;    [HideInInspector]    public static bool rifleFound = true;     //Change to false!
+    private bool shouldJump = false;    private Text ammoDisplay;    private CameraShake cameraShake;    private GameObject energyBar;    private Slider energyBarSlider;    private Image energyBarFill;    private Ability abilityScript;    [HideInInspector]    public static bool rifleFound = false;     //Change to false!
 
     private AudioManager AM;
 
@@ -84,7 +84,7 @@ using System.Collections;using System.Collections.Generic;using System.Linq;u
 
     public override void OnDeath()
     {
-        this.upgradeManagerScript.ModMoney(0); //TODO set current money to 0
+        this.upgradeManagerScript.resetMoney();
         this.gameObject.SetActive(false);
         Invoke("Respawn", 1);
     }
@@ -106,6 +106,16 @@ using System.Collections;using System.Collections.Generic;using System.Linq;u
             Instantiate(rifleAmmoPs, other.transform.position, Quaternion.identity);
             Destroy(other.gameObject);
         }
+        else if (other.tag == "End")
+        {
+            MenuHandler.loadEnd();
+        }
+    }
+
+    public void updateAbility()
+    {
+        this.abilityScript = this.weapons[this.currentWeaponIndex].GetComponent("Ability") as Ability;
+        this.abilityScript.player = this;
     }
 
 }

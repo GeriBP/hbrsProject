@@ -1,1 +1,2 @@
 - If you aim between player center and weapon, the weapon points to the left but bullets fly to the right
+- Energy is broken

@@ -257,4 +257,10 @@ public class UpgradeManager : MonoBehaviour {
         money += value;
         moneyDisp.text = money.ToString() + "$";
     }
+
+    public void resetMoney()
+    {
+        money = 0;
+        moneyDisp.text = money.ToString() + "$";
+    }
 }

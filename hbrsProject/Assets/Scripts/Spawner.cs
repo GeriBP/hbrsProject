@@ -16,7 +16,7 @@ public class Spawner : MonoBehaviour {
     {
         if (this.currentEnemy)
         {
-            this.currentEnemy.GetComponent<Enemy>().OnDeath();
+            Destroy(this.currentEnemy.gameObject);
         }
         this.currentEnemy = GameObject.Instantiate(this.enemy, this.transform.position, Quaternion.LookRotation(Vector3.forward));
     }

@@ -172,7 +172,7 @@ public abstract class Entity : MonoBehaviour {
         canTakeDmg = true;
     }
 
-    protected bool TrySwitchWeapon(int weaponIndex)
+    public bool TrySwitchWeapon(int weaponIndex)
     {
         if (!this.canSwitchWeapon || (this.weaponScript && this.weaponScript.reloading) || weaponIndex == this.currentWeaponIndex) return false;
 
@@ -197,6 +197,8 @@ public abstract class Entity : MonoBehaviour {
 
         this.weaponScript = this.CurrentWeapon.GetComponent<Weapon>();
         this.weaponScript.entity = this;
+
+        GameObject.Find("Player").GetComponent<Player>().updateAbility();
 
         return true;
     }
