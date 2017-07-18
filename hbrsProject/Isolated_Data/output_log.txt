@@ -7,49 +7,41 @@ Direct3D:
     VRAM:     2020 MB
     Driver:   22.21.13.8205
 Begin MonoManager ReloadAssembly
-Platform assembly: C:\Users\gbele\Desktop\Isolated_Data\Managed\UnityEngine.dll (this message is harmless)
-Loading C:\Users\gbele\Desktop\Isolated_Data\Managed\UnityEngine.dll into Unity Child Domain
-Platform assembly: C:\Users\gbele\Desktop\Isolated_Data\Managed\Assembly-CSharp.dll (this message is harmless)
-Loading C:\Users\gbele\Desktop\Isolated_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
-Platform assembly: C:\Users\gbele\Desktop\Isolated_Data\Managed\UnityEngine.UI.dll (this message is harmless)
-Loading C:\Users\gbele\Desktop\Isolated_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
-Platform assembly: C:\Users\gbele\Desktop\Isolated_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
-Loading C:\Users\gbele\Desktop\Isolated_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
-- Completed reload, in  0.191 seconds
-Platform assembly: C:\Users\gbele\Desktop\Isolated_Data\Managed\System.Core.dll (this message is harmless)
-Platform assembly: C:\Users\gbele\Desktop\Isolated_Data\Managed\System.dll (this message is harmless)
+Platform assembly: C:\Users\gbele\Desktop\hbrsProject\hbrsProject\Isolated_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\gbele\Desktop\hbrsProject\hbrsProject\Isolated_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\gbele\Desktop\hbrsProject\hbrsProject\Isolated_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\gbele\Desktop\hbrsProject\hbrsProject\Isolated_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\gbele\Desktop\hbrsProject\hbrsProject\Isolated_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\gbele\Desktop\hbrsProject\hbrsProject\Isolated_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\gbele\Desktop\hbrsProject\hbrsProject\Isolated_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\gbele\Desktop\hbrsProject\hbrsProject\Isolated_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+- Completed reload, in  0.313 seconds
+Platform assembly: C:\Users\gbele\Desktop\hbrsProject\hbrsProject\Isolated_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\gbele\Desktop\hbrsProject\hbrsProject\Isolated_Data\Managed\System.dll (this message is harmless)
 desktop: 1366x768 60Hz; virtual: 1366x768 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 1.955664 ms
+UnloadTime: 3.882675 ms
 The referenced script on this Behaviour (Game Object 'BasicGrenadeExplosion') is missing!
  
 (Filename:  Line: 1743)
 
 Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 4.848747 ms
+UnloadTime: 8.621943 ms
 
 Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 1895.
-Total: 1.640910 ms (FindLiveObjects: 0.155666 ms CreateObjectMapping: 0.087669 ms MarkObjects: 1.235493 ms  DeleteObjects: 0.161653 ms)
+Total: 2.000995 ms (FindLiveObjects: 0.193299 ms CreateObjectMapping: 0.117604 ms MarkObjects: 1.472842 ms  DeleteObjects: 0.216393 ms)
 
-Animator.GotoState: State could not be found
- 
-(Filename:  Line: 1274)
-
-Invalid Layer Index '-1'
- 
-(Filename:  Line: 843)
-
-change: -20 from 60 in : 16.34
+change: -20 from 60 in : 17.16
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-change: -20 from 40 in : 16.4
+change: -20 from 40 in : 18.14
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-change: -20 from 20 in : 16.56
+change: -20 from 20 in : 18.58
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -61,75 +53,55 @@ Invalid Layer Index '-1'
  
 (Filename:  Line: 843)
 
-change: -20 from 60 in : 21.12
+change: -20 from 60 in : 24.78
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-change: -20 from 40 in : 21.16
+change: -20 from 40 in : 24.82
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-change: -20 from 20 in : 21.2
+change: -20 from 20 in : 24.96
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-change: -20 from 60 in : 21.5
+change: -20 from 60 in : 25.36
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-change: -20 from 40 in : 21.92
+change: -20 from 40 in : 25.82
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-change: -20 from 20 in : 22.46
+change: -20 from 20 in : 26.78
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-change: -20 from 60 in : 23.02
+change: -20 from 60 in : 27.28
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-change: -25 from 100 in : 26.78
+change: -20 from 40 in : 27.68
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Animator.GotoState: State could not be found
- 
-(Filename:  Line: 1274)
-
-Invalid Layer Index '-1'
- 
-(Filename:  Line: 843)
-
-change: -20 from 80 in : 30.8
+change: -25 from 100 in : 27.68
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-change: -20 from 60 in : 30.84
+change: -20 from 20 in : 28.2
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-change: -20 from 40 in : 31.02
+change: -20 from 60 in : 31.76
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-change: -20 from 20 in : 31.7
+change: -20 from 40 in : 32.24
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-change: -20 from 50 in : 34.28
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-change: -20 from 50 in : 36.64
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-change: -20 from 30 in : 37
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-change: -25 from 75 in : 37.86
+change: -20 from 20 in : 32.68
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -141,35 +113,19 @@ Invalid Layer Index '-1'
  
 (Filename:  Line: 843)
 
-The referenced script on this Behaviour (Game Object '<null>') is missing!
- 
-(Filename:  Line: 1743)
-
-The referenced script on this Behaviour (Game Object 'BasicGrenadeExplosion') is missing!
- 
-(Filename:  Line: 1743)
-
-The referenced script on this Behaviour (Game Object 'BasicGrenadeExplosion') is missing!
- 
-(Filename:  Line: 1743)
-
-change: 0 from 50 in : 39.96
+change: -20 from 80 in : 34.94
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-change: -75 from 50 in : 39.98
+change: -20 from 60 in : 35.34
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-change: -75 from 10 in : 39.98
+change: -20 from 40 in : 37.4
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-change: -75 from 50 in : 40
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-change: -33 from 50 in : 46.86
+change: -20 from 20 in : 40.66
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -181,239 +137,91 @@ Invalid Layer Index '-1'
  
 (Filename:  Line: 843)
 
-The referenced script on this Behaviour (Game Object '<null>') is missing!
- 
-(Filename:  Line: 1743)
-
-The referenced script on this Behaviour (Game Object 'BasicGrenadeExplosion') is missing!
- 
-(Filename:  Line: 1743)
-
-The referenced script on this Behaviour (Game Object 'BasicGrenadeExplosion') is missing!
- 
-(Filename:  Line: 1743)
-
-change: 0 from 50 in : 47.18
+change: -20 from 80 in : 48.5
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-change: -75 from 50 in : 47.2
+change: -20 from 60 in : 48.58
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-change: -75 from 50 in : 47.2
+change: -20 from 40 in : 48.88
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-change: 100 from 17 in : 50.73049
+change: -20 from 20 in : 49.4
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Increase MS (20) by 2and the result is:
+change: -33 from 75 in : 49.4
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-22
+change: -20 from 50 in : 50.52
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-change: -20 from 60 in : 52.94
+change: -20 from 30 in : 51.54
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-change: -20 from 40 in : 52.98
+change: -20 from 10 in : 51.98
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-change: -20 from 20 in : 53.08
+change: -20 from 50 in : 53.06
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-change: -20 from 80 in : 54.28
+change: -20 from 30 in : 53.96
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-change: -20 from 60 in : 54.38
+change: -20 from 10 in : 57.16
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-change: -20 from 40 in : 54.5
+change: -20 from 60 in : 58.14
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-change: -20 from 20 in : 54.6
+change: -20 from 40 in : 58.78
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-change: -25 from 100 in : 55.44
+change: -20 from 20 in : 59.24
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-change: -25 from 75 in : 55.88
+Animator.GotoState: State could not be found
+ 
+(Filename:  Line: 1274)
+
+Invalid Layer Index '-1'
+ 
+(Filename:  Line: 843)
+
+change: -20 from 50 in : 62.52
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-change: -20 from 60 in : 57.46
+change: -20 from 30 in : 62.58
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-change: -20 from 40 in : 57.58
+change: -20 from 10 in : 62.66
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-change: -20 from 60 in : 58.04
+change: -20 from 50 in : 63.62
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-change: -20 from 20 in : 58.18
+change: -20 from 30 in : 64.62
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-change: -20 from 40 in : 58.18
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-change: -20 from 50 in : 58.54
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-change: -20 from 20 in : 58.84
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-change: -20 from 30 in : 59.66
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-change: -25 from 50 in : 60.24
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-change: -25 from 25 in : 60.88
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-change: 100 from 0 in : 61.89521
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-change: -33 from 100 in : 64.34
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-change: -25 from 67 in : 65
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-change: -70 from 42 in : 69.56
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-change: 100 from 0 in : 70.57626
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-change: -20 from 60 in : 72.26
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-change: -20 from 40 in : 72.28
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-change: -20 from 20 in : 72.34
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-change: -20 from 60 in : 73.24
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-change: -20 from 40 in : 73.42
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-change: -20 from 20 in : 73.5
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-change: -25 from 100 in : 74.24
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-change: -20 from 80 in : 74.7
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-change: -20 from 60 in : 74.9
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-change: -20 from 40 in : 74.93999
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-change: -20 from 20 in : 75.08
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-change: -20 from 60 in : 76.22
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-change: -33 from 75 in : 76.66
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-change: -20 from 40 in : 77.16
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-change: -20 from 80 in : 77.2
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-change: -20 from 60 in : 77.52
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-change: -20 from 40 in : 77.64
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-change: -20 from 20 in : 77.74
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-change: -20 from 20 in : 77.9
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-change: 100 from 42 in : 81.39227
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-change: -20 from 60 in : 83.62
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-change: -20 from 40 in : 83.66
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-change: -20 from 20 in : 84.74
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-change: -20 from 60 in : 85.25999
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-change: -20 from 40 in : 85.32
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-change: -20 from 20 in : 85.38
+change: -20 from 10 in : 65.64
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -437,151 +245,27 @@ The referenced script on this Behaviour (Game Object 'BasicGrenadeExplosion') is
  
 (Filename:  Line: 1743)
 
-change: 0 from 200 in : 88.72
+change: 0 from 60 in : 72.26
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-change: -75 from 200 in : 88.74
+change: -75 from 60 in : 72.28
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Animator.GotoState: State could not be found
- 
-(Filename:  Line: 1274)
-
-Invalid Layer Index '-1'
- 
-(Filename:  Line: 843)
-
-The referenced script on this Behaviour (Game Object '<null>') is missing!
- 
-(Filename:  Line: 1743)
-
-The referenced script on this Behaviour (Game Object 'BasicGrenadeExplosion') is missing!
- 
-(Filename:  Line: 1743)
-
-The referenced script on this Behaviour (Game Object 'BasicGrenadeExplosion') is missing!
- 
-(Filename:  Line: 1743)
-
-change: 0 from 125 in : 89.28
+change: -20 from 60 in : 73.32
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-The referenced script on this Behaviour (Game Object '<null>') is missing!
- 
-(Filename:  Line: 1743)
-
-The referenced script on this Behaviour (Game Object 'BasicGrenadeExplosion') is missing!
- 
-(Filename:  Line: 1743)
-
-The referenced script on this Behaviour (Game Object 'BasicGrenadeExplosion') is missing!
- 
-(Filename:  Line: 1743)
-
-change: 0 from 125 in : 89.28
+change: -20 from 40 in : 73.46
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-change: -75 from 125 in : 89.3
+change: -20 from 20 in : 73.62
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-change: -20 from 50 in : 91.75999
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-change: -20 from 30 in : 91.96
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-change: -20 from 10 in : 92.32
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-change: 100 from 100 in : 97.57385
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-change: -20 from 80 in : 99.56
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-change: -20 from 60 in : 99.62
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-change: -20 from 40 in : 99.68
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-change: -33 from 100 in : 99.74
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-change: -20 from 20 in : 99.75999
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-change: -20 from 80 in : 100.2
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-change: -20 from 60 in : 100.38
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-change: -20 from 40 in : 100.56
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-change: -20 from 20 in : 100.66
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-change: -20 from 80 in : 101.46
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-change: -20 from 60 in : 101.5
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-change: -20 from 40 in : 101.56
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-change: -20 from 20 in : 101.66
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-change: -20 from 80 in : 102.12
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-change: -20 from 60 in : 102.32
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-change: -20 from 40 in : 102.34
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-change: -20 from 60 in : 102.4
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-change: -25 from 67 in : 103.22
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-change: -25 from 42 in : 103.86
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-change: 100 from 17 in : 106.306
+change: -33 from 42 in : 75.98
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -605,103 +289,287 @@ The referenced script on this Behaviour (Game Object 'BasicGrenadeExplosion') is
  
 (Filename:  Line: 1743)
 
-change: 0 from 50 in : 108.24
+change: 0 from 50 in : 76.36
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-change: -75 from 50 in : 108.26
+change: -75 from 50 in : 76.38
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-change: -20 from 200 in : 109.18
+change: -75 from 50 in : 76.38
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-change: -20 from 180 in : 109.3
+change: -20 from 50 in : 78.32
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-change: -20 from 160 in : 109.4
+change: -20 from 30 in : 79.24
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-change: -20 from 140 in : 109.54
+change: -20 from 10 in : 79.74
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-change: -20 from 120 in : 109.66
+Animator.GotoState: State could not be found
+ 
+(Filename:  Line: 1274)
+
+Invalid Layer Index '-1'
+ 
+(Filename:  Line: 843)
+
+change: -20 from 60 in : 90.16
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-change: -20 from 100 in : 109.74
+change: -25 from 9 in : 90.24
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-change: -20 from 80 in : 109.84
+change: -20 from 80 in : 90.34
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-change: -20 from 60 in : 109.92
+change: 100 from 0 in : 91.24733
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-change: -20 from 40 in : 110
+Animator.GotoState: State could not be found
+ 
+(Filename:  Line: 1274)
+
+Invalid Layer Index '-1'
+ 
+(Filename:  Line: 843)
+
+change: -20 from 60 in : 96.36
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-change: -20 from 20 in : 110.1
+change: -20 from 40 in : 96.5
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-change: -20 from 50 in : 110.78
+change: -20 from 20 in : 96.64
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-change: -20 from 200 in : 110.9
+change: 100 from 100 in : 99.09515
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-change: -20 from 30 in : 110.92
+Animator.GotoState: State could not be found
+ 
+(Filename:  Line: 1274)
+
+Invalid Layer Index '-1'
+ 
+(Filename:  Line: 843)
+
+change: -20 from 60 in : 101.86
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-change: -20 from 10 in : 111.02
+Animator.GotoState: State could not be found
+ 
+(Filename:  Line: 1274)
+
+Invalid Layer Index '-1'
+ 
+(Filename:  Line: 843)
+
+change: -20 from 40 in : 102.32
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-change: -20 from 180 in : 111.5
+change: -20 from 20 in : 102.42
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-change: -20 from 160 in : 111.54
+change: -20 from 60 in : 102.62
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-change: -20 from 140 in : 111.58
+change: -20 from 40 in : 103.06
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-change: -20 from 120 in : 111.72
+change: -20 from 20 in : 103.52
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-change: -20 from 100 in : 111.84
+change: -20 from 60 in : 104.52
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-change: -20 from 80 in : 111.94
+change: -20 from 40 in : 104.98
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-change: -20 from 60 in : 112.02
+change: -20 from 20 in : 105.56
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-change: -20 from 40 in : 112.1
+change: -20 from 60 in : 109.34
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-change: -20 from 20 in : 112.18
+change: -25 from 100 in : 109.4
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -25 from 75 in : 109.42
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Animator.GotoState: State could not be found
+ 
+(Filename:  Line: 1274)
+
+Invalid Layer Index '-1'
+ 
+(Filename:  Line: 843)
+
+change: -20 from 80 in : 113.38
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 60 in : 113.44
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 40 in : 113.5
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 20 in : 114.24
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 40 in : 115.7
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 20 in : 117.8
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Animator.GotoState: State could not be found
+ 
+(Filename:  Line: 1274)
+
+Invalid Layer Index '-1'
+ 
+(Filename:  Line: 843)
+
+change: -20 from 80 in : 123.82
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 60 in : 123.9
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 40 in : 124.06
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 20 in : 125.28
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 50 in : 126.96
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 30 in : 129.04
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 10 in : 129.5
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 50 in : 134.04
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 30 in : 134.5
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 10 in : 135.04
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 60 in : 135.84
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 40 in : 136.32
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 20 in : 136.78
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Animator.GotoState: State could not be found
+ 
+(Filename:  Line: 1274)
+
+Invalid Layer Index '-1'
+ 
+(Filename:  Line: 843)
+
+change: -20 from 60 in : 138.62
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 40 in : 138.74
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 20 in : 138.86
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 50 in : 142.58
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 30 in : 143.02
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 10 in : 143.46
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 50 in : 144.22
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 30 in : 144.76
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 10 in : 145.24
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 60 in : 148.44
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 40 in : 148.54
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 20 in : 148.66
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -725,104 +593,1286 @@ The referenced script on this Behaviour (Game Object 'BasicGrenadeExplosion') is
  
 (Filename:  Line: 1743)
 
-change: 0 from 200 in : 115.24
+change: 0 from 50 in : 152.84
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-change: -75 from 200 in : 115.26
+change: -75 from 50 in : 152.86
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-change: -25 from 100 in : 116.46
+change: -75 from 50 in : 152.86
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-change: -25 from 75 in : 116.48
+change: -20 from 50 in : 156.9
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-change: -20 from 125 in : 118.14
+change: -25 from 50 in : 157.04
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-change: -20 from 50 in : 118.22
+change: -25 from 25 in : 157.06
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-change: -20 from 105 in : 118.22
+change: 100 from 0 in : 158.0684
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-change: -20 from 85 in : 118.3
+change: -20 from 60 in : 162.72
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-change: -20 from 30 in : 118.32
+change: -20 from 60 in : 163.46
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-change: -20 from 65 in : 118.38
+change: -20 from 40 in : 163.88
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-change: -20 from 10 in : 118.42
+change: -20 from 20 in : 164.34
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-change: -20 from 45 in : 118.76
+change: -20 from 40 in : 164.88
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-change: -20 from 25 in : 118.9
+change: -20 from 20 in : 165.36
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-change: -20 from 5 in : 119.04
+change: -20 from 60 in : 165.94
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-change: -20 from 50 in : 119.16
+change: -20 from 40 in : 166.38
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-change: -20 from 50 in : 119.24
+change: -20 from 20 in : 167.7
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-change: -20 from 30 in : 119.7
+change: -20 from 60 in : 171.9
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-change: -25 from 50 in : 119.82
+change: -20 from 80 in : 172.9
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-change: -20 from 30 in : 119.88
+change: -20 from 40 in : 175.7
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-change: -20 from 10 in : 119.94
+change: -25 from 100 in : 175.74
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 15.409248 ms
+change: -20 from 20 in : 176.24
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Unloading 400 unused Assets to reduce memory usage. Loaded Objects now: 388.
-Total: 1.966783 ms (FindLiveObjects: 0.125302 ms CreateObjectMapping: 0.110762 ms MarkObjects: 0.507625 ms  DeleteObjects: 1.222236 ms)
+Animator.GotoState: State could not be found
+ 
+(Filename:  Line: 1274)
 
-Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.591018 ms
+Invalid Layer Index '-1'
+ 
+(Filename:  Line: 843)
 
-Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 388.
-Total: 0.536278 ms (FindLiveObjects: 0.046614 ms CreateObjectMapping: 0.041482 ms MarkObjects: 0.439628 ms  DeleteObjects: 0.007270 ms)
+change: -20 from 60 in : 178.26
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.648324 ms
+change: -20 from 40 in : 178.4
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 388.
-Total: 0.493940 ms (FindLiveObjects: 0.040199 ms CreateObjectMapping: 0.034640 ms MarkObjects: 0.410120 ms  DeleteObjects: 0.007270 ms)
+change: -20 from 20 in : 178.5
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Animator.GotoState: State could not be found
+ 
+(Filename:  Line: 1274)
+
+Invalid Layer Index '-1'
+ 
+(Filename:  Line: 843)
+
+change: -20 from 80 in : 184.2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 60 in : 184.28
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 40 in : 184.44
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 20 in : 185.56
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 50 in : 187.28
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 30 in : 187.78
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 10 in : 189.06
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 60 in : 190.68
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 40 in : 193.26
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 20 in : 193.78
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 60 in : 194.44
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 60 in : 195.22
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 40 in : 195.26
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 20 in : 195.76
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Animator.GotoState: State could not be found
+ 
+(Filename:  Line: 1274)
+
+Invalid Layer Index '-1'
+ 
+(Filename:  Line: 843)
+
+change: -20 from 40 in : 197.84
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 20 in : 198.28
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Animator.GotoState: State could not be found
+ 
+(Filename:  Line: 1274)
+
+Invalid Layer Index '-1'
+ 
+(Filename:  Line: 843)
+
+change: -33 from 75 in : 202.2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 50 in : 202.36
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 50 in : 202.38
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 30 in : 203.42
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -25 from 42 in : 204.12
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 60 in : 205.48
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 40 in : 205.64
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 20 in : 205.78
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -33 from 17 in : 206.2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: 100 from 0 in : 207.2091
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 60 in : 210.2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 40 in : 210.24
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 20 in : 210.38
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 60 in : 210.6
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 60 in : 210.88
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 40 in : 210.9
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 20 in : 210.96
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 40 in : 211.58
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 20 in : 211.66
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Animator.GotoState: State could not be found
+ 
+(Filename:  Line: 1274)
+
+Invalid Layer Index '-1'
+ 
+(Filename:  Line: 843)
+
+The referenced script on this Behaviour (Game Object '<null>') is missing!
+ 
+(Filename:  Line: 1743)
+
+The referenced script on this Behaviour (Game Object 'BasicGrenadeExplosion') is missing!
+ 
+(Filename:  Line: 1743)
+
+The referenced script on this Behaviour (Game Object 'BasicGrenadeExplosion') is missing!
+ 
+(Filename:  Line: 1743)
+
+change: 0 from 80 in : 218.24
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+The referenced script on this Behaviour (Game Object '<null>') is missing!
+ 
+(Filename:  Line: 1743)
+
+The referenced script on this Behaviour (Game Object 'BasicGrenadeExplosion') is missing!
+ 
+(Filename:  Line: 1743)
+
+The referenced script on this Behaviour (Game Object 'BasicGrenadeExplosion') is missing!
+ 
+(Filename:  Line: 1743)
+
+change: 0 from 80 in : 218.24
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -75 from 80 in : 218.26
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 60 in : 220.66
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 40 in : 220.74
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 20 in : 220.9
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 5 in : 221.2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 50 in : 227.92
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 80 in : 228.6
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 60 in : 228.72
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -33 from 100 in : 228.72
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 40 in : 228.78
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 20 in : 228.82
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 60 in : 230.96
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 40 in : 231
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 20 in : 231.04
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 60 in : 231.46
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 40 in : 231.54
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 20 in : 231.58
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 60 in : 231.78
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 40 in : 231.84
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 20 in : 231.88
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Animator.GotoState: State could not be found
+ 
+(Filename:  Line: 1274)
+
+Invalid Layer Index '-1'
+ 
+(Filename:  Line: 843)
+
+The referenced script on this Behaviour (Game Object '<null>') is missing!
+ 
+(Filename:  Line: 1743)
+
+The referenced script on this Behaviour (Game Object 'BasicGrenadeExplosion') is missing!
+ 
+(Filename:  Line: 1743)
+
+The referenced script on this Behaviour (Game Object 'BasicGrenadeExplosion') is missing!
+ 
+(Filename:  Line: 1743)
+
+change: -25 from 67 in : 235.66
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Animator.GotoState: State could not be found
+ 
+(Filename:  Line: 1274)
+
+Invalid Layer Index '-1'
+ 
+(Filename:  Line: 843)
+
+The referenced script on this Behaviour (Game Object '<null>') is missing!
+ 
+(Filename:  Line: 1743)
+
+The referenced script on this Behaviour (Game Object 'BasicGrenadeExplosion') is missing!
+ 
+(Filename:  Line: 1743)
+
+The referenced script on this Behaviour (Game Object 'BasicGrenadeExplosion') is missing!
+ 
+(Filename:  Line: 1743)
+
+change: -25 from 42 in : 238.8
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -25 from 17 in : 238.82
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: 100 from 0 in : 239.8353
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 60 in : 242.44
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 40 in : 242.48
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 20 in : 242.58
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 60 in : 243.06
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 60 in : 243.26
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 40 in : 243.46
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 20 in : 243.6
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 40 in : 243.92
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 20 in : 244.48
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 80 in : 251.28
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 60 in : 251.34
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 40 in : 251.4
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 20 in : 251.46
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 60 in : 252.62
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 40 in : 252.74
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 20 in : 252.86
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Animator.GotoState: State could not be found
+ 
+(Filename:  Line: 1274)
+
+Invalid Layer Index '-1'
+ 
+(Filename:  Line: 843)
+
+The referenced script on this Behaviour (Game Object '<null>') is missing!
+ 
+(Filename:  Line: 1743)
+
+The referenced script on this Behaviour (Game Object 'BasicGrenadeExplosion') is missing!
+ 
+(Filename:  Line: 1743)
+
+The referenced script on this Behaviour (Game Object 'BasicGrenadeExplosion') is missing!
+ 
+(Filename:  Line: 1743)
+
+change: 0 from 80 in : 261.3
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -75 from 80 in : 261.32
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 5 in : 262.28
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 60 in : 263.4
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 40 in : 263.52
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 20 in : 263.62
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 60 in : 264.02
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 40 in : 264.34
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 20 in : 264.48
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 60 in : 264.82
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 40 in : 264.94
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 20 in : 265.28
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -33 from 100 in : 268.22
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Animator.GotoState: State could not be found
+ 
+(Filename:  Line: 1274)
+
+Invalid Layer Index '-1'
+ 
+(Filename:  Line: 843)
+
+The referenced script on this Behaviour (Game Object '<null>') is missing!
+ 
+(Filename:  Line: 1743)
+
+The referenced script on this Behaviour (Game Object 'BasicGrenadeExplosion') is missing!
+ 
+(Filename:  Line: 1743)
+
+The referenced script on this Behaviour (Game Object 'BasicGrenadeExplosion') is missing!
+ 
+(Filename:  Line: 1743)
+
+change: 0 from 50 in : 268.6
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -75 from 50 in : 268.62
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -75 from 50 in : 268.62
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 80 in : 271.5
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 60 in : 271.54
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 40 in : 271.64
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 20 in : 271.8
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 60 in : 271.92
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 60 in : 272.76
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 40 in : 272.9
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 20 in : 273.02
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 40 in : 273.72
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -25 from 67 in : 273.96
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 50 in : 279.56
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 50 in : 279.56
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -25 from 42 in : 279.9
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 80 in : 281.18
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 60 in : 281.26
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 40 in : 281.3
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 20 in : 281.36
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 60 in : 281.86
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 40 in : 281.94
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 20 in : 281.98
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Animator.GotoState: State could not be found
+ 
+(Filename:  Line: 1274)
+
+Invalid Layer Index '-1'
+ 
+(Filename:  Line: 843)
+
+The referenced script on this Behaviour (Game Object '<null>') is missing!
+ 
+(Filename:  Line: 1743)
+
+The referenced script on this Behaviour (Game Object 'BasicGrenadeExplosion') is missing!
+ 
+(Filename:  Line: 1743)
+
+The referenced script on this Behaviour (Game Object 'BasicGrenadeExplosion') is missing!
+ 
+(Filename:  Line: 1743)
+
+change: 0 from 20 in : 283.9
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+The referenced script on this Behaviour (Game Object '<null>') is missing!
+ 
+(Filename:  Line: 1743)
+
+The referenced script on this Behaviour (Game Object 'BasicGrenadeExplosion') is missing!
+ 
+(Filename:  Line: 1743)
+
+The referenced script on this Behaviour (Game Object 'BasicGrenadeExplosion') is missing!
+ 
+(Filename:  Line: 1743)
+
+change: 0 from 20 in : 283.9
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -75 from 20 in : 283.92
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 30 in : 287.5
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 30 in : 287.5
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 10 in : 287.6
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 10 in : 287.6
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 50 in : 289.02
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 30 in : 289.12
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 10 in : 289.22
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: 100 from 17 in : 291.2735
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Animator.GotoState: State could not be found
+ 
+(Filename:  Line: 1274)
+
+Invalid Layer Index '-1'
+ 
+(Filename:  Line: 843)
+
+The referenced script on this Behaviour (Game Object '<null>') is missing!
+ 
+(Filename:  Line: 1743)
+
+The referenced script on this Behaviour (Game Object 'BasicGrenadeExplosion') is missing!
+ 
+(Filename:  Line: 1743)
+
+The referenced script on this Behaviour (Game Object 'BasicGrenadeExplosion') is missing!
+ 
+(Filename:  Line: 1743)
+
+Animator.GotoState: State could not be found
+ 
+(Filename:  Line: 1274)
+
+Invalid Layer Index '-1'
+ 
+(Filename:  Line: 843)
+
+The referenced script on this Behaviour (Game Object '<null>') is missing!
+ 
+(Filename:  Line: 1743)
+
+The referenced script on this Behaviour (Game Object 'BasicGrenadeExplosion') is missing!
+ 
+(Filename:  Line: 1743)
+
+The referenced script on this Behaviour (Game Object 'BasicGrenadeExplosion') is missing!
+ 
+(Filename:  Line: 1743)
+
+change: 0 from 50 in : 294.7
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -75 from 50 in : 294.72
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 60 in : 298.82
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 40 in : 298.92
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 20 in : 299.02
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 50 in : 300.46
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 30 in : 300.54
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 10 in : 300.62
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 60 in : 301.76
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 40 in : 301.86
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 20 in : 301.96
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Animator.GotoState: State could not be found
+ 
+(Filename:  Line: 1274)
+
+Invalid Layer Index '-1'
+ 
+(Filename:  Line: 843)
+
+The referenced script on this Behaviour (Game Object '<null>') is missing!
+ 
+(Filename:  Line: 1743)
+
+The referenced script on this Behaviour (Game Object 'BasicGrenadeExplosion') is missing!
+ 
+(Filename:  Line: 1743)
+
+The referenced script on this Behaviour (Game Object 'BasicGrenadeExplosion') is missing!
+ 
+(Filename:  Line: 1743)
+
+change: 0 from 50 in : 302.46
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -75 from 50 in : 302.48
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 80 in : 304.66
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 60 in : 304.8
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 40 in : 304.9
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 20 in : 304.94
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Animator.GotoState: State could not be found
+ 
+(Filename:  Line: 1274)
+
+Invalid Layer Index '-1'
+ 
+(Filename:  Line: 843)
+
+The referenced script on this Behaviour (Game Object '<null>') is missing!
+ 
+(Filename:  Line: 1743)
+
+The referenced script on this Behaviour (Game Object 'BasicGrenadeExplosion') is missing!
+ 
+(Filename:  Line: 1743)
+
+The referenced script on this Behaviour (Game Object 'BasicGrenadeExplosion') is missing!
+ 
+(Filename:  Line: 1743)
+
+change: -75 from 80 in : 310.88
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 60 in : 311.74
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 40 in : 311.82
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 20 in : 311.98
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 5 in : 312.22
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -25 from 100 in : 313.92
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 50 in : 314.48
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 30 in : 314.62
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 10 in : 314.84
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 60 in : 316.02
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 40 in : 316.18
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 20 in : 316.36
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: 100 from 75 in : 323.3169
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 60 in : 325.2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 40 in : 325.24
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 20 in : 325.5
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 60 in : 325.56
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 40 in : 326.1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 20 in : 326.14
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Animator.GotoState: State could not be found
+ 
+(Filename:  Line: 1274)
+
+Invalid Layer Index '-1'
+ 
+(Filename:  Line: 843)
+
+The referenced script on this Behaviour (Game Object '<null>') is missing!
+ 
+(Filename:  Line: 1743)
+
+The referenced script on this Behaviour (Game Object 'BasicGrenadeExplosion') is missing!
+ 
+(Filename:  Line: 1743)
+
+The referenced script on this Behaviour (Game Object 'BasicGrenadeExplosion') is missing!
+ 
+(Filename:  Line: 1743)
+
+change: 0 from 200 in : 329.78
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -75 from 200 in : 329.8
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Animator.GotoState: State could not be found
+ 
+(Filename:  Line: 1274)
+
+Invalid Layer Index '-1'
+ 
+(Filename:  Line: 843)
+
+The referenced script on this Behaviour (Game Object '<null>') is missing!
+ 
+(Filename:  Line: 1743)
+
+The referenced script on this Behaviour (Game Object 'BasicGrenadeExplosion') is missing!
+ 
+(Filename:  Line: 1743)
+
+The referenced script on this Behaviour (Game Object 'BasicGrenadeExplosion') is missing!
+ 
+(Filename:  Line: 1743)
+
+change: 0 from 125 in : 331.16
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -75 from 125 in : 331.18
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 50 in : 332.42
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 30 in : 332.52
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -70 from 100 in : 332.72
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 10 in : 333.08
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: 100 from 30 in : 338.4479
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 80 in : 340.5
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 60 in : 340.52
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 40 in : 340.64
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 20 in : 341.08
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 60 in : 342.42
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 40 in : 342.46
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 20 in : 342.5
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 60 in : 343.74
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 40 in : 343.88
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 20 in : 344
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -25 from 100 in : 344.76
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Animator.GotoState: State could not be found
+ 
+(Filename:  Line: 1274)
+
+Invalid Layer Index '-1'
+ 
+(Filename:  Line: 843)
+
+The referenced script on this Behaviour (Game Object '<null>') is missing!
+ 
+(Filename:  Line: 1743)
+
+The referenced script on this Behaviour (Game Object 'BasicGrenadeExplosion') is missing!
+ 
+(Filename:  Line: 1743)
+
+The referenced script on this Behaviour (Game Object 'BasicGrenadeExplosion') is missing!
+ 
+(Filename:  Line: 1743)
+
+change: 0 from 50 in : 346.4
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -75 from 50 in : 346.42
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -75 from 50 in : 346.42
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -75 from 50 in : 346.64
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Animator.GotoState: State could not be found
+ 
+(Filename:  Line: 1274)
+
+Invalid Layer Index '-1'
+ 
+(Filename:  Line: 843)
+
+The referenced script on this Behaviour (Game Object '<null>') is missing!
+ 
+(Filename:  Line: 1743)
+
+The referenced script on this Behaviour (Game Object 'BasicGrenadeExplosion') is missing!
+ 
+(Filename:  Line: 1743)
+
+The referenced script on this Behaviour (Game Object 'BasicGrenadeExplosion') is missing!
+ 
+(Filename:  Line: 1743)
+
+change: -75 from 80 in : 348.56
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 5 in : 349
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 80 in : 349.7
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 60 in : 349.84
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 40 in : 349.92
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 20 in : 350
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 60 in : 350.2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 60 in : 350.86
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -25 from 75 in : 351.08
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Animator.GotoState: State could not be found
+ 
+(Filename:  Line: 1274)
+
+Invalid Layer Index '-1'
+ 
+(Filename:  Line: 843)
+
+The referenced script on this Behaviour (Game Object '<null>') is missing!
+ 
+(Filename:  Line: 1743)
+
+The referenced script on this Behaviour (Game Object 'BasicGrenadeExplosion') is missing!
+ 
+(Filename:  Line: 1743)
+
+The referenced script on this Behaviour (Game Object 'BasicGrenadeExplosion') is missing!
+ 
+(Filename:  Line: 1743)
+
+change: -75 from 40 in : 356.66
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 60 in : 357.46
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 40 in : 357.56
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 20 in : 357.68
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -33 from 50 in : 359.1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Animator.GotoState: State could not be found
+ 
+(Filename:  Line: 1274)
+
+Invalid Layer Index '-1'
+ 
+(Filename:  Line: 843)
+
+The referenced script on this Behaviour (Game Object '<null>') is missing!
+ 
+(Filename:  Line: 1743)
+
+The referenced script on this Behaviour (Game Object 'BasicGrenadeExplosion') is missing!
+ 
+(Filename:  Line: 1743)
+
+The referenced script on this Behaviour (Game Object 'BasicGrenadeExplosion') is missing!
+ 
+(Filename:  Line: 1743)
+
+change: -20 from 40 in : 365.86
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -20 from 20 in : 367.04
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: -33 from 17 in : 367.08
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+change: 100 from 0 in : 368.0923
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
 Setting up 2 worker threads for Enlighten.
-  Thread -> id: 23b8 -> priority: 1 
-  Thread -> id: 4534 -> priority: 1 
+  Thread -> id: 4b8 -> priority: 1 
+  Thread -> id: 4d38 -> priority: 1 
